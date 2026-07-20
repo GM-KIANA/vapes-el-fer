@@ -1,0 +1,2693 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vapes el Fer | Catálogo Exclusivo</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="https://unpkg.com/lucide@latest"></script>
+</head>
+<body>
+
+    <!-- NAVBAR MINIMALISTA -->
+    <header class="navbar">
+        <div class="logo">
+            <div class="logo-placeholder">Vapes el Fer</div>
+        </div>
+        <nav class="nav-links">
+            <a href="#vapes">Vapes</a>
+            <a href="#wax">Wax</a>
+            <a href="#pedidos">Sobre Pedido</a>
+        </nav>
+        <div class="cart-icon-container" onclick="toggleCart()">
+            <i data-lucide="shopping-cart" class="cart-icon"></i>
+            <span id="cart-count" class="cart-badge">0</span>
+        </div>
+    </header>
+
+    <!-- HERO SECTION -->
+    <section class="hero">
+        <div class="hero-bg-effect"></div>
+        <div class="hero-content">
+            <img src="images/logo.jpeg" alt="Logo Vapes el Fer" class="hero-logo-img">
+            <p>El mejor vapor, los sabores más intensos y la calidad premium que buscas.</p>
+            
+            <!-- BANNER CARRUSEL DE PROMOS -->
+            <div class="promo-carousel">
+                <div class="carousel-track">
+                    <!-- Slide 1: Promos -->
+                    <div class="carousel-slide active">
+                        <div class="promo-badge">OFERTA</div>
+                        <h3>¡Domingo de 2x1!</h3>
+                        <p>Llévate 2 vapes por el precio de 1 (valido unicamente los domingos en las vias).</p>
+                    </div>
+                    <!-- Slide 2: Próximos Pedidos -->
+                    <div class="carousel-slide">
+                        <div class="promo-badge pedido">MAYOREO Y MENUDEO</div>
+                        <h3>Mayoreo y Menudo de productos</h3>
+                        <p>Manejamos precios de Menudeo, Medio Mayoreo y Mayoreo! (PREGUNTE AL VENDEDOR)</p>
+                    </div>
+                    <!-- Slide 3: Ofertas -->
+                    <div class="carousel-slide">
+                        <div class="promo-badge liquidacion">Promo Wax</div>
+                        <h3>Wax con vape incluido</h3>
+                        <p>Compra cualquier Wax y llevate un vape de 100 pesos de regalo.</p>
+                    </div>
+                </div>
+                <!-- Indicadores de bolitas abajo -->
+                <div class="carousel-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTENEDOR PRINCIPAL DEL CATÁLOGO -->
+    <main class="catalog-container">
+        
+        <!-- SECCIÓN VAPES -->
+        <section id="desechables" class="category-section">
+            <h2 class="section-title"> Vapes </h2>
+            <div class="products-grid">
+
+                <!-- Producto 1 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="images/death_row_5000.webp" alt="Vape Death Row 5000" class="product-item-img">
+                    </div>
+                    <div class="product-info">
+                        <h3>Snoop Dog: Death Row 5000 Puffs</h3>
+                        <p class="product-desc">Vaper oficial de Snoop Dog. Batería recargable tipo C .
+                            5000 puffs. Varios sabores disponibles
+                        </p>
+                        
+                        <!-- Selector de sabores -->
+                        <div class="flavor-selection">
+                            <label for="flavor-dog">Selecciona un sabor (mas sabores preguntar al vendedor):</label>
+                            <select id="flavor-dog" class="select-flavor">
+                                <option value="Menta"> Menta </option>
+                                <option value="Fresa"> Fresa </option>
+                                <option value="Uva"> Uva </option>
+                                <option value="sandya"> Sandía </option>
+                                <option value="mango"> Mango </option>
+                                <option value="Otro Sabor"> Otro Sabor</option>
+                            </select>
+                        </div>
+
+                        <div class="product-footer">
+                            <span class="product-price">$100.00</span>
+                            <button class="btn-add" onclick="addToCartWithFlavor('Death Row 5000', 100, 'flavor-dog')">
+                                <i data-lucide="plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 2 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="images/death_row_7000.webp" alt="Vape Death Row 7000" class="product-item-img">
+                    </div>
+                    <div class="product-info">
+                        <h3>Snoop Dog: Death Row 7000 Puffs</h3>
+                        <p class="product-desc"> Vape orion. Batería recargable tipo C .
+                            75000 puffs. Varios sabores disponibles</p>
+                        
+                        <!-- Selector de sabores -->
+                        <div class="flavor-selection">
+                            <label for="flavor-snoop">Selecciona un sabor (mas sabores preguntar al vendedor):</label>
+                            <select id="flavor-snoop" class="select-flavor">
+                                <option value="Menta"> Menta </option>
+                                <option value="Fresa"> Fresa </option>
+                                <option value="Uva"> Uva </option>
+                                <option value="sandya"> Sandía </option>
+                                <option value="mango"> Mango </option>
+                                <option value="Otro Sabor"> Otro Sabor</option>
+                            </select>
+                        </div>
+
+                        <div class="product-footer">
+                            <span class="product-price">$100.00</span>
+                            <button class="btn-add" onclick="addToCartWithFlavor('Death Row 7000', 100, 'flavor-snoop')">
+                                <i data-lucide="plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 3 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="images/orion_vape.jpg" alt="Vape orion" class="product-item-img">
+                    </div>
+                    <div class="product-info">
+                        <h3>Lost vape: Orion Var 7500 puffs</h3>
+                        <p class="product-desc">Vaper oficial de Snoop Dogatería recargable tipo C .
+                            7000 puffs. Varios sabores disponibles</p>
+                        
+                        <!-- Selector de sabores -->
+                        <div class="flavor-selection">
+                            <label for="flavor-orion">Selecciona un sabor:</label>
+                            <select id="flavor-orion" class="select-flavor">
+                                <option value="Menta"> Menta </option>
+                                <option value="Fresa"> Fresa </option>
+                                <option value="Uva"> Uva </option>
+                                <option value="sandya"> Sandía </option>
+                                <option value="mango"> Mango </option>
+                                <option value="Otro Sabor"> Otro Sabor</option>
+                            </select>
+                        </div>
+
+                        <div class="product-footer">
+                            <span class="product-price">$100.00</span>
+                            <button class="btn-add" onclick="addToCartWithFlavor('Orion Var 7500', 100, 'flavor-orion')">
+                                <i data-lucide="plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 4 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="images/anuel_vape.jpg" alt="Vape anuel" class="product-item-img">
+                    </div>
+                    <div class="product-info">
+                        <h3>Anuel AA: Real Hasta la muerte 5000 Puffs </h3>
+                        <p class="product-desc"> Vape oficial de Anuel AA. Batería recargable tipo C .
+                            5000 puffs. Varios sabores disponibles</p>
+                        
+                        <!-- Selector de sabores -->
+                        <div class="flavor-selection">
+                            <label for="flavor-anuel">Selecciona un sabor (mas sabores preguntar al vendedor):</label>
+                            <select id="flavor-anuel" class="select-flavor">
+                                <option value="Menta"> Menta </option>
+                                <option value="Fresa"> Fresa </option>
+                                <option value="Uva"> Uva </option>
+                                <option value="sandya"> Sandía </option>
+                                <option value="mango"> Mango </option>
+                                <option value="Otro Sabor"> Otro Sabor</option>
+                            </select>
+                        </div>
+
+                        <div class="product-footer">
+                            <span class="product-price">$100.00</span>
+                            <button class="btn-add" onclick="addToCartWithFlavor('Anuel 5000', 100, 'flavor-anuel')">
+                                <i data-lucide="plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 5 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="images/dummy_50k.png" alt="Vape dummy" class="product-item-img">
+                    </div>
+                    <div class="product-info">
+                        <h3>Dummy Vape 50,000 Puffs</h3>
+                        <p class="product-desc"> Dummy Vape. Batería recargable tipo C .
+                            50,000 puffs. Varios sabores disponibles</p>
+                        
+                        <!-- Selector de sabores -->
+                        <div class="flavor-selection">
+                            <label for="flavor-dummy">Selecciona un sabor (mas sabores preguntar al vendedor):</label>
+                            <select id="flavor-dummy" class="select-flavor">
+                                <option value="Menta"> Menta </option>
+                                <option value="Fresa"> Fresa </option>
+                                <option value="Uva"> Uva </option>
+                                <option value="sandya"> Sandía </option>
+                                <option value="mango"> Mango </option>
+                                <option value="Otro Sabor"> Otro Sabor</option>
+                            </select>
+                        </div>
+
+                        <div class="product-footer">
+                            <span class="product-price">$450.00</span>
+                            <button class="btn-add" onclick="addToCartWithFlavor('Dummy 50,000', 450, 'flavor-dummy')">
+                                <i data-lucide="plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 6 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="images/sphere.jpg" alt="Vape sphere" class="product-item-img">
+                    </div>
+                    <div class="product-info">
+                        <h3>Vape Dojo Sphere X 40,000 Puffs</h3>
+                        <p class="product-desc"> Vape Dojo Sphere X. Batería recargable tipo C .
+                            40,000 puffs. Varios sabores disponibles</p>
+                        
+                        <!-- Selector de sabores -->
+                        <div class="flavor-selection">
+                            <label for="flavor-sphere">Selecciona un sabor:</label>
+                            <select id="flavor-sphere" class="select-flavor">
+                                <option value="Menta"> Menta </option>
+                                <option value="Fresa"> Fresa </option>
+                                <option value="Uva"> Uva </option>
+                                <option value="sandya"> Sandía </option>
+                                <option value="mango"> Mango </option>
+                                <option value="Otro Sabor"> Otro Sabor</option>
+                            </select>
+                        </div>
+
+                        <div class="product-footer">
+                            <span class="product-price">$400.00</span>
+                            <button class="btn-add" onclick="addToCartWithFlavor('Sphere 40,000 Puffs', 400, 'flavor-sphere')">
+                                <i data-lucide="plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 7 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="images/elfbar_5000.png" alt="Vape elfbar" class="product-item-img">
+                    </div>
+                    <div class="product-info">
+                        <h3>Vape ElfBar BC5000 5000 Puffs</h3>
+                        <p class="product-desc"> Vape ElfBar BC5000 de 5000 puffs. Batería recargable tipo C .
+                            5000 puffs. Varios sabores disponibles</p>
+                        
+                        <!-- Selector de sabores -->
+                        <div class="flavor-selection">
+                            <label for="flavor-elfbar">Selecciona un sabor (mas sabores preguntar al vendedor):</label>
+                            <select id="flavor-elfbar" class="select-flavor">
+                                <option value="Menta"> Menta </option>
+                                <option value="Fresa"> Fresa </option>
+                                <option value="Uva"> Uva </option>
+                                <option value="sandya"> Sandía </option>
+                                <option value="mango"> Mango </option>
+                                <option value="Otro Sabor"> Otro Sabor</option>
+                            </select>
+                        </div>
+
+                        <div class="product-footer">
+                            <span class="product-price">$100.00</span>
+                            <button class="btn-add" onclick="addToCartWithFlavor('ElfBar BC5000 ', 100, 'flavor-elfbar')">
+                                <i data-lucide="plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 8 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="images/elfbar_6000.webp" alt="Vape elfbar" class="product-item-img">
+                    </div>
+                    <div class="product-info">
+                        <h3>Vape ElfBar TE6000 6000 Puffs</h3>
+                        <p class="product-desc"> Vape ElfBar TE6000 de 6000 puffs. Batería recargable tipo C .
+                            6000 puffs. Varios sabores disponibles</p>
+                        
+                        <!-- Selector de sabores -->
+                        <div class="flavor-selection">
+                            <label for="flavor-elfbar">Selecciona un sabor (mas sabores preguntar al vendedor):</label>
+                            <select id="flavor-elfbar" class="select-flavor">
+                                <option value="Menta"> Menta </option>
+                                <option value="Fresa"> Fresa </option>
+                                <option value="Uva"> Uva </option>
+                                <option value="sandya"> Sandía </option>
+                                <option value="mango"> Mango </option>
+                                <option value="Otro Sabor"> Otro Sabor</option>
+                            </select>
+                        </div>
+
+                        <div class="product-footer">
+                            <span class="product-price">$100.00</span>
+                            <button class="btn-add" onclick="addToCartWithFlavor('ElfBar TE6000 ', 100, 'flavor-elfbar')">
+                                <i data-lucide="plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 9 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="images/ELUX.webp" alt="Vape elux" class="product-item-img">
+                    </div>
+                    <div class="product-info">
+                        <h3>Vape Elux Astra 50,000 Puffs</h3>
+                        <p class="product-desc"> Vape Elux Astra de 50,000 puffs. Batería recargable tipo C .
+                            50,000 puffs. Varios sabores disponibles</p>
+                        
+                        <!-- Selector de sabores -->
+                        <div class="flavor-selection">
+                            <label for="flavor-elux">Selecciona un sabor (mas sabores preguntar al vendedor):</label>
+                            <select id="flavor-elux" class="select-flavor">
+                                <option value="Menta"> Menta </option>
+                                <option value="Fresa"> Fresa </option>
+                                <option value="Uva"> Uva </option>
+                                <option value="sandya"> Sandía </option>
+                                <option value="mango"> Mango </option>
+                                <option value="Otro Sabor"> Otro Sabor</option>
+                            </select>
+                        </div>
+
+                        <div class="product-footer">
+                            <span class="product-price">$350.00</span>
+                            <button class="btn-add" onclick="addToCartWithFlavor('Elux Astra 50,000 Puffs', 350, 'flavor-elux')">
+                                <i data-lucide="plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 10 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="images/evo_dominio.webp" alt="Vape evo dominio" class="product-item-img">
+                    </div>
+                    <div class="product-info">
+                        <h3>Vape Evo Dominio 16,000 Puffs</h3>
+                        <p class="product-desc"> Vape Evo Dominio de 16,000 puffs. Batería recargable tipo C .
+                            16,000 puffs. Varios sabores disponibles</p>
+                        
+                        <!-- Selector de sabores -->
+                        <div class="flavor-selection">
+                            <label for="flavor-evo">Selecciona un sabor:</label>
+                            <select id="flavor-evo" class="select-flavor">
+                                <option value="Menta"> Menta </option>
+                                <option value="Fresa"> Fresa </option>
+                                <option value="Uva"> Uva </option>
+                                <option value="sandya"> Sandía </option>
+                                <option value="mango"> Mango </option>
+                                <option value="Otro Sabor"> Otro Sabor</option>
+                            </select>
+                        </div>
+
+                        <div class="product-footer">
+                            <span class="product-price">$200.00</span>
+                            <button class="btn-add" onclick="addToCartWithFlavor('Evo Dominio 16,000 Puffs', 200, 'flavor-evo')">
+                                <i data-lucide="plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 11 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="images/evo_dozo.webp" alt="Vape evo dozo" class="product-item-img">
+                    </div>
+                    <div class="product-info">
+                        <h3>Vape Evo Dozo 18,000 Puffs</h3>
+                        <p class="product-desc"> Vape Evo Dozo de 18,000 puffs. Batería recargable tipo C .
+                            18,000 puffs. Varios sabores disponibles</p>
+                        
+                        <!-- Selector de sabores -->
+                        <div class="flavor-selection">
+                            <label for="flavor-dozo">Selecciona un sabor (mas sabores preguntar al vendedor):</label>
+                            <select id="flavor-dozo" class="select-flavor">
+                                <option value="Menta"> Menta </option>
+                                <option value="Fresa"> Fresa </option>
+                                <option value="Uva"> Uva </option>
+                                <option value="sandya"> Sandía </option>
+                                <option value="mango"> Mango </option>
+                                <option value="Otro Sabor"> Otro Sabor</option>
+                            </select>
+                        </div>
+
+                        <div class="product-footer">
+                            <span class="product-price">$200.00</span>
+                            <button class="btn-add" onclick="addToCartWithFlavor('Evo Dozo 18,000 Puffs', 200, 'flavor-dozo')">
+                                <i data-lucide="plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 12 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="images/EVO_Bar.webp" alt="Vape evo bar" class="product-item-img">
+                    </div>
+                    <div class="product-info">
+                        <h3>Vape Evo Bar 7000 Puffs</h3>
+                        <p class="product-desc"> Vape Evo Bar de 7,000 puffs. Batería recargable tipo C .
+                            7,000 puffs. Varios sabores disponibles</p>
+                        
+                        <!-- Selector de sabores -->
+                        <div class="flavor-selection">
+                            <label for="flavor-bar">Selecciona un sabor (mas sabores preguntar al vendedor):</label>
+                            <select id="flavor-bar" class="select-flavor">
+                                <option value="Menta"> Menta </option>
+                                <option value="Fresa"> Fresa </option>
+                                <option value="Uva"> Uva </option>
+                                <option value="sandya"> Sandía </option>
+                                <option value="mango"> Mango </option>
+                                <option value="Otro Sabor"> Otro Sabor</option>
+                            </select>
+                        </div>
+
+                        <div class="product-footer">
+                            <span class="product-price">$130.00</span>
+                            <button class="btn-add" onclick="addToCartWithFlavor('Evo Bar 7,000 Puffs', 130, 'flavor-bar')">
+                                <i data-lucide="plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 13 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="images/fasta.webp" alt="Vape fasta" class="product-item-img">
+                    </div>
+                    <div class="product-info">
+                        <h3>Vape Fasta 35,000 Puffs</h3>
+                        <p class="product-desc"> Vape Fasta de 35,000 puffs. Batería recargable tipo C .
+                            35,000 puffs. Varios sabores disponibles</p>
+                        
+                        <!-- Selector de sabores -->
+                        <div class="flavor-selection">
+                            <label for="flavor-fasta">Selecciona un sabor (mas sabores preguntar al vendedor):</label>
+                            <select id="flavor-fasta" class="select-flavor">
+                                <option value="Menta"> Menta </option>
+                                <option value="Fresa"> Fresa </option>
+                                <option value="Uva"> Uva </option>
+                                <option value="sandya"> Sandía </option>
+                                <option value="mango"> Mango </option>
+                                <option value="Otro Sabor"> Otro Sabor</option>
+                            </select>
+                        </div>
+
+                        <div class="product-footer">
+                            <span class="product-price">$250.00</span>
+                            <button class="btn-add" onclick="addToCartWithFlavor('Vape Fasta 35,000 Puffs', 250, 'flavor-fasta')">
+                                <i data-lucide="plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 14 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="images/fasta_40k.webp" alt="Vape fasta 40k" class="product-item-img">
+                    </div>
+                    <div class="product-info">
+                        <h3>Vape Fasta 40,000 Puffs</h3>
+                        <p class="product-desc"> Vape Fasta de 40,000 puffs. Batería recargable tipo C .
+                            40,000 puffs. Varios sabores disponibles</p>
+                        
+                        <!-- Selector de sabores -->
+                        <div class="flavor-selection">
+                            <label for="flavor-fasta_40">Selecciona un sabor (mas sabores preguntar al vendedor):</label>
+                            <select id="flavor-fasta_40k" class="select-flavor">
+                                <option value="Menta"> Menta </option>
+                                <option value="Fresa"> Fresa </option>
+                                <option value="Uva"> Uva </option>
+                                <option value="sandya"> Sandía </option>
+                                <option value="mango"> Mango </option>
+                                <option value="Otro Sabor"> Otro Sabor</option>
+                            </select>
+                        </div>
+
+                        <div class="product-footer">
+                            <span class="product-price">$400.00</span>
+                            <button class="btn-add" onclick="addToCartWithFlavor('Vape Fasta 40,000 Puffs', 400, 'flavor-fasta_40k')">
+                                <i data-lucide="plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 15 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="images/galax.jpg" alt="Vape galax" class="product-item-img">
+                    </div>
+                    <div class="product-info">
+                        <h3>Vape Diner Lady Galax 60,000 Puffs</h3>
+                        <p class="product-desc"> Vape Diner Lady Galax de 60,000 puffs. Batería recargable tipo C .
+                            60,000 puffs. Varios sabores disponibles</p>
+                        
+                        <!-- Selector de sabores -->
+                        <div class="flavor-selection">
+                            <label for="flavor-galax">Selecciona un sabor (mas sabores preguntar al vendedor):</label>
+                            <select id="flavor-galax" class="select-flavor">
+                                <option value="Menta"> Menta </option>
+                                <option value="Fresa"> Fresa </option>
+                                <option value="Uva"> Uva </option>
+                                <option value="sandya"> Sandía </option>
+                                <option value="mango"> Mango </option>
+                                <option value="Otro Sabor"> Otro Sabor</option>
+                            </select>
+                        </div>
+
+                        <div class="product-footer">
+                            <span class="product-price">$450.00</span>
+                            <button class="btn-add" onclick="addToCartWithFlavor('Vape Galax 60,000 Puffs', 450, 'flavor-galax')">
+                                <i data-lucide="plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Producto 16 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="images/insta_bar.webp" alt="Vape insta bar" class="product-item-img">
+                    </div>
+                    <div class="product-info">
+                        <h3>Vape InstaBar Mega 80,000 Puffs</h3>
+                        <p class="product-desc"> Vape InstaBar Mega de 80,000 puffs. Batería recargable tipo C .
+                            80,000 puffs. Varios sabores disponibles</p>
+                        
+                        <!-- Selector de sabores -->
+                        <div class="flavor-selection">
+                            <label for="flavor-instabar">Selecciona un sabor (mas sabores preguntar al vendedor):</label>
+                            <select id="flavor-instabar" class="select-flavor">
+                                <option value="Menta"> Menta </option>
+                                <option value="Fresa"> Fresa </option>
+                                <option value="Uva"> Uva </option>
+                                <option value="sandya"> Sandía </option>
+                                <option value="mango"> Mango </option>
+                                <option value="Otro Sabor"> Otro Sabor</option>
+                            </select>
+                        </div>
+
+                        <div class="product-footer">
+                            <span class="product-price">$450.00</span>
+                            <button class="btn-add" onclick="addToCartWithFlavor('Vape InstaBar Mega 80,000 Puffs', 450, 'flavor-instabar')">
+                                <i data-lucide="plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 17 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="images/lost_mary.webp" alt="Vape lost mary" class="product-item-img">
+                    </div>
+                    <div class="product-info">
+                        <h3>Vape Lost Mary MO 5000 Puffs</h3>
+                        <p class="product-desc"> Vape Lost Mary MO de 5,000 puffs. Batería recargable tipo C .
+                            5,000 puffs. Varios sabores disponibles</p>
+                        
+                        <!-- Selector de sabores -->
+                        <div class="flavor-selection">
+                            <label for="flavor-lostmary">Selecciona un sabor (mas sabores preguntar al vendedor):</label>
+                            <select id="flavor-lostmary" class="select-flavor">
+                                <option value="Menta"> Menta </option>
+                                <option value="Fresa"> Fresa </option>
+                                <option value="Uva"> Uva </option>
+                                <option value="sandya"> Sandía </option>
+                                <option value="mango"> Mango </option>
+                                <option value="Otro Sabor"> Otro Sabor</option>
+                            </select>
+                        </div>
+
+                        <div class="product-footer">
+                            <span class="product-price">$100.00</span>
+                            <button class="btn-add" onclick="addToCartWithFlavor('Vape Lost Mary 5000 Puffs', 100, 'flavor-lostmary')">
+                                <i data-lucide="plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 18 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="images/masking.webp" alt="Vape masking" class="product-item-img">
+                    </div>
+                    <div class="product-info">
+                        <h3>Vape Masking 100,000 Puffs</h3>
+                        <p class="product-desc"> Vape Masking de 100,000 puffs. Batería recargable tipo C .
+                            100,000 puffs. Varios sabores disponibles</p>
+                        
+                        <!-- Selector de sabores -->
+                        <div class="flavor-selection">
+                            <label for="flavor-masking">Selecciona un sabor (mas sabores preguntar al vendedor):</label>
+                            <select id="flavor-masking" class="select-flavor">
+                                <option value="Menta"> Menta </option>
+                                <option value="Fresa"> Fresa </option>
+                                <option value="Uva"> Uva </option>
+                                <option value="sandya"> Sandía </option>
+                                <option value="mango"> Mango </option>
+                                <option value="Otro Sabor"> Otro Sabor</option>
+                            </select>
+                        </div>
+
+                        <div class="product-footer">
+                            <span class="product-price">$100.00</span>
+                            <button class="btn-add" onclick="addToCartWithFlavor('Vape Masking 100,000 Puffs', 100, 'flavor-masking')">
+                                <i data-lucide="plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 19 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="images/meteor.jpg" alt="Vape meteor" class="product-item-img">
+                    </div>
+                    <div class="product-info">
+                        <h3>Vape Meteor 70,000 Puffs</h3>
+                        <p class="product-desc"> Vape Meteor de 70,000 puffs. Batería recargable tipo C .
+                            70,000 puffs. Varios sabores disponibles</p>
+                        
+                        <!-- Selector de sabores -->
+                        <div class="flavor-selection">
+                            <label for="flavor-meteor">Selecciona un sabor (mas sabores preguntar al vendedor):</label>
+                            <select id="flavor-meteor" class="select-flavor">
+                                <option value="Menta"> Menta </option>
+                                <option value="Fresa"> Fresa </option>
+                                <option value="Uva"> Uva </option>
+                                <option value="sandya"> Sandía </option>
+                                <option value="mango"> Mango </option>
+                                <option value="Otro Sabor"> Otro Sabor</option>
+                            </select>
+                        </div>
+
+                        <div class="product-footer">
+                            <span class="product-price">$100.00</span>
+                            <button class="btn-add" onclick="addToCartWithFlavor('Vape Meteor 70,000 Puffs', 100, 'flavor-meteor')">
+                                <i data-lucide="plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 20 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="images/switch_om.png" alt="Vape Switch OM" class="product-item-img">
+                    </div>
+                    <div class="product-info">
+                        <h3>Vape Switch OM 30,000 Puffs</h3>
+                        <p class="product-desc"> Vape Switch OM de 30,000 puffs. Batería recargable tipo C .
+                            30,000 puffs. Varios sabores disponibles</p>
+                        
+                        <!-- Selector de sabores -->
+                        <div class="flavor-selection">
+                            <label for="flavor-switch-om">Selecciona un sabor (mas sabores preguntar al vendedor):</label>
+                            <select id="flavor-switch-om" class="select-flavor">
+                                <option value="Menta"> Menta </option>
+                                <option value="Fresa"> Fresa </option>
+                                <option value="Uva"> Uva </option>
+                                <option value="sandya"> Sandía </option>
+                                <option value="mango"> Mango </option>
+                                <option value="Otro Sabor"> Otro Sabor</option>
+                            </select>
+                        </div>
+
+                        <div class="product-footer">
+                            <span class="product-price">$100.00</span>
+                            <button class="btn-add" onclick="addToCartWithFlavor('Vape Switch OM 30,000 Puffs', 100, 'flavor-switch-om')">
+                                <i data-lucide="plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 21 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="images/nexa.webp" alt="Vape nexa" class="product-item-img">
+                    </div>
+                    <div class="product-info">
+                        <h3>Vape Nexa Pix 40,000 Puffs</h3>
+                        <p class="product-desc"> Vape Nexa Pix de 40,000 puffs. Batería recargable tipo C .
+                            40,000 puffs. Varios sabores disponibles</p>
+                        
+                        <!-- Selector de sabores -->
+                        <div class="flavor-selection">
+                            <label for="flavor-nexa-pix">Selecciona un sabor (mas sabores preguntar al vendedor):</label>
+                            <select id="flavor-nexa-pix" class="select-flavor">
+                                <option value="Menta"> Menta </option>
+                                <option value="Fresa"> Fresa </option>
+                                <option value="Uva"> Uva </option>
+                                <option value="sandya"> Sandía </option>
+                                <option value="mango"> Mango </option>
+                                <option value="Otro Sabor"> Otro Sabor</option>
+                            </select>
+                        </div>
+
+                        <div class="product-footer">
+                            <span class="product-price">$100.00</span>
+                            <button class="btn-add" onclick="addToCartWithFlavor('Vape Nexa Pix 40,000 Puffs', 100, 'flavor-nexa-pix')">
+                                <i data-lucide="plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 22 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="images/nexa_ultra.webp" alt="Vape nexa ultra" class="product-item-img">
+                    </div>
+                    <div class="product-info">
+                        <h3>Vape Nexa Ultra 50,000 Puffs</h3>
+                        <p class="product-desc"> Vape Nexa Ultra de 50,000 puffs. Batería recargable tipo C .
+                            50,000 puffs. Varios sabores disponibles</p>
+                        
+                        <!-- Selector de sabores -->
+                        <div class="flavor-selection">
+                            <label for="flavor-nexa-ultra">Selecciona un sabor (mas sabores preguntar al vendedor):</label>
+                            <select id="flavor-nexa-ultra" class="select-flavor">
+                                <option value="Menta"> Menta </option>
+                                <option value="Fresa"> Fresa </option>
+                                <option value="Uva"> Uva </option>
+                                <option value="sandya"> Sandía </option>
+                                <option value="mango"> Mango </option>
+                                <option value="Otro Sabor"> Otro Sabor</option>
+                            </select>
+                        </div>
+
+                        <div class="product-footer">
+                            <span class="product-price">$100.00</span>
+                            <button class="btn-add" onclick="addToCartWithFlavor('Vape Nexa Ultra 50,000 Puffs', 100, 'flavor-nexa-ultra')">
+                                <i data-lucide="plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 23 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="images/nexpod.jpg" alt="Vape nexpod" class="product-item-img">
+                    </div>
+                    <div class="product-info">
+                        <h3>Vape NexPod 5,000 Puffs</h3>
+                        <p class="product-desc"> Vape NexPod de 5,000 puffs. Batería recargable tipo C .
+                            5,000 puffs. Varios sabores disponibles</p>
+                        
+                        <!-- Selector de sabores -->
+                        <div class="flavor-selection">
+                            <label for="flavor-nexpod">Selecciona un sabor (mas sabores preguntar al vendedor):</label>
+                            <select id="flavor-nexpod" class="select-flavor">
+                                <option value="Menta"> Menta </option>
+                                <option value="Fresa"> Fresa </option>
+                                <option value="Uva"> Uva </option>
+                                <option value="sandya"> Sandía </option>
+                                <option value="mango"> Mango </option>
+                                <option value="Otro Sabor"> Otro Sabor</option>
+                            </select>
+                        </div>
+
+                        <div class="product-footer">
+                            <span class="product-price">$100.00</span>
+                            <button class="btn-add" onclick="addToCartWithFlavor('Vape NexPod 5,000 Puffs', 100, 'flavor-nexpod')">
+                                <i data-lucide="plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 24 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="images/off_stamp.webp" alt="Vape off stamp" class="product-item-img">
+                    </div>
+                    <div class="product-info">
+                        <h3>Vape Off Stamp SW9000 9,000 Puffs</h3>
+                        <p class="product-desc"> Vape Off Stamp SW9000 de 9,000 puffs. Batería recargable tipo C .
+                            9,000 puffs. Varios sabores disponibles</p>
+                        
+                        <!-- Selector de sabores -->
+                        <div class="flavor-selection">
+                            <label for="flavor-offstamp">Selecciona un sabor (mas sabores preguntar al vendedor):</label>
+                            <select id="flavor-offstamp" class="select-flavor">
+                                <option value="Menta"> Menta </option>
+                                <option value="Fresa"> Fresa </option>
+                                <option value="Uva"> Uva </option>
+                                <option value="sandya"> Sandía </option>
+                                <option value="mango"> Mango </option>
+                                <option value="Otro Sabor"> Otro Sabor</option>
+                            </select>
+                        </div>
+
+                        <div class="product-footer">
+                            <span class="product-price">$100.00</span>
+                            <button class="btn-add" onclick="addToCartWithFlavor('Vape Off Stamp SW9000 9,000 Puffs', 100, 'flavor-offstamp')">
+                                <i data-lucide="plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 25 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="images/podz_pulse.webp" alt="Vape podz pulse" class="product-item-img">
+                    </div>
+                    <div class="product-info">
+                        <h3>Vape Podz Pulse X 30,000 Puffs</h3>
+                        <p class="product-desc"> Vape Podz Pulse X 30,000 puffs. Batería recargable tipo C .
+                            30,000 puffs. Varios sabores disponibles</p>
+                        
+                        <!-- Selector de sabores -->
+                        <div class="flavor-selection">
+                            <label for="flavor-podz">Selecciona un sabor (mas sabores preguntar al vendedor):</label>
+                            <select id="flavor-podz" class="select-flavor">
+                                <option value="Menta"> Menta </option>
+                                <option value="Fresa"> Fresa </option>
+                                <option value="Uva"> Uva </option>
+                                <option value="sandya"> Sandía </option>
+                                <option value="mango"> Mango </option>
+                                <option value="Otro Sabor"> Otro Sabor</option>
+                            </select>
+                        </div>
+
+                        <div class="product-footer">
+                            <span class="product-price">$100.00</span>
+                            <button class="btn-add" onclick="addToCartWithFlavor('Vape Podz Pulse X 30,000 Puffs', 100, 'flavor-podz')">
+                                <i data-lucide="plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 27 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="images/rifbar_turbo.webp" alt="Vape rifbar turbo" class="product-item-img">
+                    </div>
+                    <div class="product-info">
+                        <h3>Vape RifBar Turbo  15,000 Puffs</h3>
+                        <p class="product-desc"> Vape RifBar Turbo  15,000 Puffs. Batería recargable tipo C .
+                            15,000 puffs. Varios sabores disponibles</p>
+                        
+                        <!-- Selector de sabores -->
+                        <div class="flavor-selection">
+                            <label for="flavor-rifbar_turbo">Selecciona un sabor (mas sabores preguntar al vendedor):</label>
+                            <select id="flavor-rifbar_turbo" class="select-flavor">
+                                <option value="Menta"> Menta </option>
+                                <option value="Fresa"> Fresa </option>
+                                <option value="Uva"> Uva </option>
+                                <option value="sandya"> Sandía </option>
+                                <option value="mango"> Mango </option>
+                                <option value="Otro Sabor"> Otro Sabor</option>
+                            </select>
+                        </div>
+
+                        <div class="product-footer">
+                            <span class="product-price">$100.00</span>
+                            <button class="btn-add" onclick="addToCartWithFlavor('Vape RifBar Turbo  15,000 Puffs', 100, 'flavor-rifbar_turbo')">
+                                <i data-lucide="plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 26 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="images/rifbar.png" alt="Vape rifbar" class="product-item-img">
+                    </div>
+                    <div class="product-info">
+                        <h3>Vape RifBar Astro  7,500 Puffs</h3>
+                        <p class="product-desc"> Vape RifBar Astro  7,500 Puffs. Batería recargable tipo C .
+                            7,500 puffs. Varios sabores disponibles</p>
+                        
+                        <!-- Selector de sabores -->
+                        <div class="flavor-selection">
+                            <label for="flavor-rifbar">Selecciona un sabor (mas sabores preguntar al vendedor):</label>
+                            <select id="flavor-rifbar" class="select-flavor">
+                                <option value="Menta"> Menta </option>
+                                <option value="Fresa"> Fresa </option>
+                                <option value="Uva"> Uva </option>
+                                <option value="sandya"> Sandía </option>
+                                <option value="mango"> Mango </option>
+                                <option value="Otro Sabor"> Otro Sabor</option>
+                            </select>
+                        </div>
+
+                        <div class="product-footer">
+                            <span class="product-price">$100.00</span>
+                            <button class="btn-add" onclick="addToCartWithFlavor('Vape RifBar Astro  7,500 Puffs', 100, 'flavor-rifbar')">
+                                <i data-lucide="plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 28 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="images/space_bx.jpg" alt="Vape space bx" class="product-item-img">
+                    </div>
+                    <div class="product-info">
+                        <h3>Vape Space BX 8,000 Puffs</h3>
+                        <p class="product-desc"> Vape Space BX 8,000 Puffs. Batería recargable tipo C .
+                            8,000 puffs. Varios sabores disponibles</p>
+                        
+                        <!-- Selector de sabores -->
+                        <div class="flavor-selection">
+                            <label for="flavor-space-bx">Selecciona un sabor (mas sabores preguntar al vendedor):</label>
+                            <select id="flavor-space-bx" class="select-flavor">
+                                <option value="Menta"> Menta </option>
+                                <option value="Fresa"> Fresa </option>
+                                <option value="Uva"> Uva </option>
+                                <option value="sandya"> Sandía </option>
+                                <option value="mango"> Mango </option>
+                                <option value="Otro Sabor"> Otro Sabor</option>
+                            </select>
+                        </div>
+
+                        <div class="product-footer">
+                            <span class="product-price">$100.00</span>
+                            <button class="btn-add" onclick="addToCartWithFlavor('Vape Space BX 8,000 Puffs', 100, 'flavor-space-bx')">
+                                <i data-lucide="plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 29 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="images/space_glow.png" alt="Vape space glow" class="product-item-img">
+                    </div>
+                    <div class="product-info">
+                        <h3>Vape Space Glow 20,000 Puffs</h3>
+                        <p class="product-desc"> Vape Space Glow 20,000 Puffs. Batería recargable tipo C .
+                            20,000 puffs. Varios sabores disponibles</p>
+                        
+                        <!-- Selector de sabores -->
+                        <div class="flavor-selection">
+                            <label for="flavor-space-glow">Selecciona un sabor (mas sabores preguntar al vendedor):</label>
+                            <select id="flavor-space-glow" class="select-flavor">
+                                <option value="Menta"> Menta </option>
+                                <option value="Fresa"> Fresa </option>
+                                <option value="Uva"> Uva </option>
+                                <option value="sandya"> Sandía </option>
+                                <option value="mango"> Mango </option>
+                                <option value="Otro Sabor"> Otro Sabor</option>
+                            </select>
+                        </div>
+
+                        <div class="product-footer">
+                            <span class="product-price">$100.00</span>
+                            <button class="btn-add" onclick="addToCartWithFlavor('Vape Space Glow 20,000 Puffs', 100, 'flavor-space-glow')">
+                                <i data-lucide="plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 30 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="images/suonon.jpg" alt="Vape suonon" class="product-item-img">
+                    </div>
+                    <div class="product-info">
+                        <h3>Vape Suonon Donete 50,000 Puffs</h3>
+                        <p class="product-desc"> Vape Suonon Donete 50,000 Puffs. Batería recargable tipo C .
+                            50,000 puffs. Varios sabores disponibles</p>
+                        
+                        <!-- Selector de sabores -->
+                        <div class="flavor-selection">
+                            <label for="flavor-sounon">Selecciona un sabor (mas sabores preguntar al vendedor):</label>
+                            <select id="flavor-sounon" class="select-flavor">
+                                <option value="Menta"> Menta </option>
+                                <option value="Fresa"> Fresa </option>
+                                <option value="Uva"> Uva </option>
+                                <option value="sandya"> Sandía </option>
+                                <option value="mango"> Mango </option>
+                                <option value="Otro Sabor"> Otro Sabor</option>
+                            </select>
+                        </div>
+
+                        <div class="product-footer">
+                            <span class="product-price">$100.00</span>
+                            <button class="btn-add" onclick="addToCartWithFlavor('Vape Suonon Donete 50,000 Puffs', 100, 'flavor-sounon')">
+                                <i data-lucide="plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 31 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="images/tasteflex.jpg" alt="Vape tasteflex" class="product-item-img">
+                    </div>
+                    <div class="product-info">
+                        <h3>Vape TasteFlex Ultralock 50,000 Puffs</h3>
+                        <p class="product-desc"> Vape TasteFlex Ultralock 50,000 Puffs. Batería recargable tipo C .
+                            50,000 puffs. Varios sabores disponibles</p>
+                        
+                        <!-- Selector de sabores -->
+                        <div class="flavor-selection">
+                            <label for="flavor-tasteflex">Selecciona un sabor (mas sabores preguntar al vendedor):</label>
+                            <select id="flavor-tasteflex" class="select-flavor">
+                                <option value="Menta"> Menta </option>
+                                <option value="Fresa"> Fresa </option>
+                                <option value="Uva"> Uva </option>
+                                <option value="sandya"> Sandía </option>
+                                <option value="mango"> Mango </option>
+                                <option value="Otro Sabor"> Otro Sabor</option>
+                            </select>
+                        </div>
+
+                        <div class="product-footer">
+                            <span class="product-price">$100.00</span>
+                            <button class="btn-add" onclick="addToCartWithFlavor('Vape TasteFlex Ultralock 50,000 Puffs', 100, 'flavor-tasteflex')">
+                                <i data-lucide="plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 32 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="images/tyson.webp" alt="Vape tyson" class="product-item-img">
+                    </div>
+                    <div class="product-info">
+                        <h3>Vape Tyson 7,000 Puffs</h3>
+                        <p class="product-desc"> Vape oficial de Tyson 7,000 Puffs. Batería recargable tipo C .
+                            7,000 puffs. Varios sabores disponibles</p>
+                        
+                        <!-- Selector de sabores -->
+                        <div class="flavor-selection">
+                            <label for="flavor-tyson">Selecciona un sabor (mas sabores preguntar al vendedor):</label>
+                            <select id="flavor-tyson" class="select-flavor">
+                                <option value="Menta"> Menta </option>
+                                <option value="Fresa"> Fresa </option>
+                                <option value="Uva"> Uva </option>
+                                <option value="sandya"> Sandía </option>
+                                <option value="mango"> Mango </option>
+                                <option value="Otro Sabor"> Otro Sabor</option>
+                            </select>
+                        </div>
+
+                        <div class="product-footer">
+                            <span class="product-price">$100.00</span>
+                            <button class="btn-add" onclick="addToCartWithFlavor('Vape Tyson 7,000 Puffs', 100, 'flavor-tyson')">
+                                <i data-lucide="plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 33 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="images/f_off.jpg" alt="Vape foff" class="product-item-img">
+                    </div>
+                    <div class="product-info">
+                        <h3>Vape F** Off 50,000 Puffs</h3>
+                        <p class="product-desc"> Vape F** Off 50,000 Puffs. Batería recargable tipo C .
+                            50,000 puffs. Varios sabores disponibles</p>
+                        
+                        <!-- Selector de sabores -->
+                        <div class="flavor-selection">
+                            <label for="flavor-foff">Selecciona un sabor (mas sabores preguntar al vendedor):</label>
+                            <select id="flavor-foff" class="select-flavor">
+                                <option value="Menta"> Menta </option>
+                                <option value="Fresa"> Fresa </option>
+                                <option value="Uva"> Uva </option>
+                                <option value="sandya"> Sandía </option>
+                                <option value="mango"> Mango </option>
+                                <option value="Otro Sabor"> Otro Sabor</option>
+                            </select>
+                        </div>
+
+                        <div class="product-footer">
+                            <span class="product-price">$100.00</span>
+                            <button class="btn-add" onclick="addToCartWithFlavor('Vape F** Off 50,000 Puffs', 100, 'flavor-foff')">
+                                <i data-lucide="plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 34 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="images/voom.jpg" alt="Vape voom" class="product-item-img">
+                    </div>
+                    <div class="product-info">
+                        <h3>Vape Voom Disposable 20,000 Puffs</h3>
+                        <p class="product-desc"> Vape Voom Disposable 20,000 Puffs. Batería recargable tipo C .
+                            20,000 puffs. Varios sabores disponibles</p>
+                        
+                        <!-- Selector de sabores -->
+                        <div class="flavor-selection">
+                            <label for="flavor-voom">Selecciona un sabor (mas sabores preguntar al vendedor):</label>
+                            <select id="flavor-voom" class="select-flavor">
+                                <option value="Menta"> Menta </option>
+                                <option value="Fresa"> Fresa </option>
+                                <option value="Uva"> Uva </option>
+                                <option value="sandya"> Sandía </option>
+                                <option value="mango"> Mango </option>
+                                <option value="Otro Sabor"> Otro Sabor</option>
+                            </select>
+                        </div>
+
+                        <div class="product-footer">
+                            <span class="product-price">$100.00</span>
+                            <button class="btn-add" onclick="addToCartWithFlavor('Vape Voom Disposable 20,000 Puffs', 100, 'flavor-voom')">
+                                <i data-lucide="plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 35 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="images/v_play.jpg" alt="Vape vplay" class="product-item-img">
+                    </div>
+                    <div class="product-info">
+                        <h3>Vape V-Play 20,000 Puffs</h3>
+                        <p class="product-desc"> Vape mini consola de videojuegos V-Play 20,000 Puffs. Batería recargable tipo C .
+                            20,000 puffs. Varios sabores disponibles</p>
+                        
+                        <!-- Selector de sabores -->
+                        <div class="flavor-selection">
+                            <label for="flavor-vplay">Selecciona un sabor (mas sabores preguntar al vendedor):</label>
+                            <select id="flavor-vplay" class="select-flavor">
+                                <option value="Menta"> Menta </option>
+                                <option value="Fresa"> Fresa </option>
+                                <option value="Uva"> Uva </option>
+                                <option value="sandya"> Sandía </option>
+                                <option value="mango"> Mango </option>
+                                <option value="Otro Sabor"> Otro Sabor</option>
+                            </select>
+                        </div>
+
+                        <div class="product-footer">
+                            <span class="product-price">$100.00</span>
+                            <button class="btn-add" onclick="addToCartWithFlavor('Vape V-Play 20,000 Puffs', 100, 'flavor-vplay')">
+                                <i data-lucide="plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 36 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="images/waka_30k.webp" alt="Vape waka_30" class="product-item-img">
+                    </div>
+                    <div class="product-info">
+                        <h3>Vape Waka 30,000 Puffs</h3>
+                        <p class="product-desc"> Vape Waka 30,000 Puffs. Batería recargable tipo C .
+                            30,000 puffs. Varios sabores disponibles</p>
+                        
+                        <!-- Selector de sabores -->
+                        <div class="flavor-selection">
+                            <label for="flavor-waka30">Selecciona un sabor (mas sabores preguntar al vendedor):</label>
+                            <select id="flavor-waka30" class="select-flavor">
+                                <option value="Menta"> Menta </option>
+                                <option value="Fresa"> Fresa </option>
+                                <option value="Uva"> Uva </option>
+                                <option value="sandya"> Sandía </option>
+                                <option value="mango"> Mango </option>
+                                <option value="Otro Sabor"> Otro Sabor</option>
+                            </select>
+                        </div>
+
+                        <div class="product-footer">
+                            <span class="product-price">$100.00</span>
+                            <button class="btn-add" onclick="addToCartWithFlavor('Vape Waka 30,000 Puffs', 100, 'flavor-waka')">
+                                <i data-lucide="plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 37 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="images/slim.webp" alt="Vape slim" class="product-item-img">
+                    </div>
+                    <div class="product-info">
+                        <h3>Vape Waka Slim 12,000 Puffs</h3>
+                        <p class="product-desc"> Vape Waka Slim 12,000 Puffs. Batería recargable tipo C .
+                            12,000 puffs. Varios sabores disponibles</p>
+                        
+                        <!-- Selector de sabores -->
+                        <div class="flavor-selection">
+                            <label for="flavor-slim">Selecciona un sabor (mas sabores preguntar al vendedor):</label>
+                            <select id="flavor-slim" class="select-flavor">
+                                <option value="Menta"> Menta </option>
+                                <option value="Fresa"> Fresa </option>
+                                <option value="Uva"> Uva </option>
+                                <option value="sandya"> Sandía </option>
+                                <option value="mango"> Mango </option>
+                                <option value="Otro Sabor"> Otro Sabor</option>
+                            </select>
+                        </div>
+
+                        <div class="product-footer">
+                            <span class="product-price">$100.00</span>
+                            <button class="btn-add" onclick="addToCartWithFlavor('Vape Waka Slim 12,000 Puffs', 100, 'flavor-slim')">
+                                <i data-lucide="plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 38 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="images/yibla.webp" alt="Vape yibla" class="product-item-img">
+                    </div>
+                    <div class="product-info">
+                        <h3>Vape Yibla 6,500 Puffs</h3>
+                        <p class="product-desc"> Vape Yibla 6,500 Puffs. Batería recargable tipo C .
+                            6,500 puffs. Varios sabores disponibles</p>
+                        
+                        <!-- Selector de sabores -->
+                        <div class="flavor-selection">
+                            <label for="flavor-yibla">Selecciona un sabor (mas sabores preguntar al vendedor):</label>
+                            <select id="flavor-yibla" class="select-flavor">
+                                <option value="Menta"> Menta </option>
+                                <option value="Fresa"> Fresa </option>
+                                <option value="Uva"> Uva </option>
+                                <option value="sandya"> Sandía </option>
+                                <option value="mango"> Mango </option>
+                                <option value="Otro Sabor"> Otro Sabor</option>
+                            </select>
+                        </div>
+
+                        <div class="product-footer">
+                            <span class="product-price">$100.00</span>
+                            <button class="btn-add" onclick="addToCartWithFlavor('Vape Yibla 6,500 Puffs', 100, 'flavor-yibla')">
+                                <i data-lucide="plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 39 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="images/airfuze.webp" alt="Vape airfuze" class="product-item-img">
+                    </div>
+                    <div class="product-info">
+                        <h3>Vape AirFuze Jet 35,000 Puffs</h3>
+                        <p class="product-desc"> Vape AirFuze Jet 35,000 Puffs. Batería recargable tipo C .
+                            35,000 puffs. Varios sabores disponibles</p>
+                        
+                        <!-- Selector de sabores -->
+                        <div class="flavor-selection">
+                            <label for="flavor-airfuze">Selecciona un sabor (mas sabores preguntar al vendedor):</label>
+                            <select id="flavor-airfuze" class="select-flavor">
+                                <option value="Menta"> Menta </option>
+                                <option value="Fresa"> Fresa </option>
+                                <option value="Uva"> Uva </option>
+                                <option value="sandya"> Sandía </option>
+                                <option value="mango"> Mango </option>
+                                <option value="Otro Sabor"> Otro Sabor</option>
+                            </select>
+                        </div>
+
+                        <div class="product-footer">
+                            <span class="product-price">$100.00</span>
+                            <button class="btn-add" onclick="addToCartWithFlavor('Vape AirFuze Jet 35,000 Puffs', 100, 'flavor-airfuze')">
+                                <i data-lucide="plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 40 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="images/vpr.jpg" alt="Vape vpr" class="product-item-img">
+                    </div>
+                    <div class="product-info">
+                        <h3>Vape Elf VPR Ultra 7,000 Puffs</h3>
+                        <p class="product-desc"> Vape Elf VPR Ultra 7,000 Puffs. Batería recargable tipo C .
+                            7,000 puffs. Varios sabores disponibles</p>
+                        
+                        <!-- Selector de sabores -->
+                        <div class="flavor-selection">
+                            <label for="flavor-vpr">Selecciona un sabor (mas sabores preguntar al vendedor):</label>
+                            <select id="flavor-vpr" class="select-flavor">
+                                <option value="Menta"> Menta </option>
+                                <option value="Fresa"> Fresa </option>
+                                <option value="Uva"> Uva </option>
+                                <option value="sandya"> Sandía </option>
+                                <option value="mango"> Mango </option>
+                                <option value="Otro Sabor"> Otro Sabor</option>
+                            </select>
+                        </div>
+
+                        <div class="product-footer">
+                            <span class="product-price">$100.00</span>
+                            <button class="btn-add" onclick="addToCartWithFlavor('Vape Elf VPR Ultra 7,000 Puffs', 100, 'flavor-vpr')">
+                                <i data-lucide="plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 41 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="images/vpr_12.jpg" alt="Vape vpr 12" class="product-item-img">
+                    </div>
+                    <div class="product-info">
+                        <h3>Vape Elf VPR  12,000 Puffs</h3>
+                        <p class="product-desc"> Vape Elf VPR  12,000 Puffs. Batería recargable tipo C .
+                            12,000 puffs. Varios sabores disponibles</p>
+                        
+                        <!-- Selector de sabores -->
+                        <div class="flavor-selection">
+                            <label for="flavor-vpr12">Selecciona un sabor (mas sabores preguntar al vendedor):</label>
+                            <select id="flavor-vpr12" class="select-flavor">
+                                <option value="Menta"> Menta </option>
+                                <option value="Fresa"> Fresa </option>
+                                <option value="Uva"> Uva </option>
+                                <option value="sandya"> Sandía </option>
+                                <option value="mango"> Mango </option>
+                                <option value="Otro Sabor"> Otro Sabor</option>
+                            </select>
+                        </div>
+
+                        <div class="product-footer">
+                            <span class="product-price">$100.00</span>
+                            <button class="btn-add" onclick="addToCartWithFlavor('Vape Elf VPR  12,000 Puffs', 100, 'flavor-vpr12')">
+                                <i data-lucide="plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 42 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="images/beast.webp" alt="Vape beast" class="product-item-img">
+                    </div>
+                    <div class="product-info">
+                        <h3>Vape Flavor Beast 50,000 Puffs</h3>
+                        <p class="product-desc"> Vape Flavor Beast 50,000 Puffs. Batería recargable tipo C .
+                            50,000 puffs. Varios sabores disponibles</p>
+                        
+                        <!-- Selector de sabores -->
+                        <div class="flavor-selection">
+                            <label for="flavor-beast">Selecciona un sabor (mas sabores preguntar al vendedor):</label>
+                            <select id="flavor-beast" class="select-flavor">
+                                <option value="Menta"> Menta </option>
+                                <option value="Fresa"> Fresa </option>
+                                <option value="Uva"> Uva </option>
+                                <option value="sandya"> Sandía </option>
+                                <option value="mango"> Mango </option>
+                                <option value="Otro Sabor"> Otro Sabor</option>
+                            </select>
+                        </div>
+
+                        <div class="product-footer">
+                            <span class="product-price">$100.00</span>
+                            <button class="btn-add" onclick="addToCartWithFlavor('Vape Flavor Beast 50,000 Puffs', 100, 'flavor-beast')">
+                                <i data-lucide="plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 43 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="images/funky.webp" alt="Vape funky" class="product-item-img">
+                    </div>
+                    <div class="product-info">
+                        <h3>Vape Funky Lands Ti7000 7,000 Puffs</h3>
+                        <p class="product-desc"> Vape Funky Lands Ti7000 7,000 Puffs. Batería recargable tipo C .
+                            7,000 puffs. Varios sabores disponibles</p>
+                        
+                        <!-- Selector de sabores -->
+                        <div class="flavor-selection">
+                            <label for="flavor-funky">Selecciona un sabor (mas sabores preguntar al vendedor):</label>
+                            <select id="flavor-funky" class="select-flavor">
+                                <option value="Menta"> Menta </option>
+                                <option value="Fresa"> Fresa </option>
+                                <option value="Uva"> Uva </option>
+                                <option value="sandya"> Sandía </option>
+                                <option value="mango"> Mango </option>
+                                <option value="Otro Sabor"> Otro Sabor</option>
+                            </select>
+                        </div>
+
+                        <div class="product-footer">
+                            <span class="product-price">$100.00</span>
+                            <button class="btn-add" onclick="addToCartWithFlavor('Vape Funky Lands Ti7000 7,000 Puffs', 100, 'flavor-funky')">
+                                <i data-lucide="plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 44 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="images/fzzy.jpg" alt="Vape fzzy" class="product-item-img">
+                    </div>
+                    <div class="product-info">
+                        <h3>Vape Fzzy Bar 20,000 Puffs</h3>
+                        <p class="product-desc"> Vape Fzzy Bar 20,000 Puffs. Batería recargable tipo C .
+                            20,000 puffs. Varios sabores disponibles</p>
+                        
+                        <!-- Selector de sabores -->
+                        <div class="flavor-selection">
+                            <label for="flavor-fzzy">Selecciona un sabor (mas sabores preguntar al vendedor):</label>
+                            <select id="flavor-fzzy" class="select-flavor">
+                                <option value="Menta"> Menta </option>
+                                <option value="Fresa"> Fresa </option>
+                                <option value="Uva"> Uva </option>
+                                <option value="sandya"> Sandía </option>
+                                <option value="mango"> Mango </option>
+                                <option value="Otro Sabor"> Otro Sabor</option>
+                            </select>
+                        </div>
+
+                        <div class="product-footer">
+                            <span class="product-price">$100.00</span>
+                            <button class="btn-add" onclick="addToCartWithFlavor('Vape Fzzy Bar 20,000 Puffs', 100, 'flavor-fzzy')">
+                                <i data-lucide="plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 45 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="images/geek_usa.webp" alt="Vape geek usa" class="product-item-img">
+                    </div>
+                    <div class="product-info">
+                        <h3>Vape Geek USA Pulse 40,000 Puffs</h3>
+                        <p class="product-desc"> Vape Geek USA Pulse 40,000 Puffs. Batería recargable tipo C .
+                            40,000 puffs. Varios sabores disponibles</p>
+                        
+                        <!-- Selector de sabores -->
+                        <div class="flavor-selection">
+                            <label for="flavor-geek">Selecciona un sabor (mas sabores preguntar al vendedor):</label>
+                            <select id="flavor-geek" class="select-flavor">
+                                <option value="Menta"> Menta </option>
+                                <option value="Fresa"> Fresa </option>
+                                <option value="Uva"> Uva </option>
+                                <option value="sandya"> Sandía </option>
+                                <option value="mango"> Mango </option>
+                                <option value="Otro Sabor"> Otro Sabor</option>
+                            </select>
+                        </div>
+
+                        <div class="product-footer">
+                            <span class="product-price">$100.00</span>
+                            <button class="btn-add" onclick="addToCartWithFlavor('Vape Geek USA Pulse 40,000 Puffs', 100, 'flavor-geek')">
+                                <i data-lucide="plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 46 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="images/hqd.jpg" alt="Vape hqd" class="product-item-img">
+                    </div>
+                    <div class="product-info">
+                        <h3>Vape HQD 5,500 Puffs</h3>
+                        <p class="product-desc"> Vape HQD 5,500 Puffs. Batería recargable tipo C .
+                            5,500 puffs. Varios sabores disponibles</p>
+                        
+                        <!-- Selector de sabores -->
+                        <div class="flavor-selection">
+                            <label for="flavor-hqd">Selecciona un sabor (mas sabores preguntar al vendedor):</label>
+                            <select id="flavor-hqd" class="select-flavor">
+                                <option value="Menta"> Menta </option>
+                                <option value="Fresa"> Fresa </option>
+                                <option value="Uva"> Uva </option>
+                                <option value="sandya"> Sandía </option>
+                                <option value="mango"> Mango </option>
+                                <option value="Otro Sabor"> Otro Sabor</option>
+                            </select>
+                        </div>
+
+                        <div class="product-footer">
+                            <span class="product-price">$100.00</span>
+                            <button class="btn-add" onclick="addToCartWithFlavor('Vape HQD 5,500 Puffs', 100, 'flavor-hqd')">
+                                <i data-lucide="plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 47 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="images/iplay.webp" alt="Vape iplay" class="product-item-img">
+                    </div>
+                    <div class="product-info">
+                        <h3>Vape I-Play X-Box 40,000 Puffs</h3>
+                        <p class="product-desc"> Vape I-Play X-Box 40,000 Puffs. Batería recargable tipo C .
+                            40,000 puffs. Varios sabores disponibles</p>
+                        
+                        <!-- Selector de sabores -->
+                        <div class="flavor-selection">
+                            <label for="flavor-iplay">Selecciona un sabor (mas sabores preguntar al vendedor):</label>
+                            <select id="flavor-iplay" class="select-flavor">
+                                <option value="Menta"> Menta </option>
+                                <option value="Fresa"> Fresa </option>
+                                <option value="Uva"> Uva </option>
+                                <option value="sandya"> Sandía </option>
+                                <option value="mango"> Mango </option>
+                                <option value="Otro Sabor"> Otro Sabor</option>
+                            </select>
+                        </div>
+
+                        <div class="product-footer">
+                            <span class="product-price">$100.00</span>
+                            <button class="btn-add" onclick="addToCartWithFlavor('Vape I-Play X-Box 40,000 Puffs', 100, 'flavor-iplay')">
+                                <i data-lucide="plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 48 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="images/lost_maryos.jpg" alt="Vape lost mary os" class="product-item-img">
+                    </div>
+                    <div class="product-info">
+                        <h3>Vape Lost Mary OS5000 5,000 Puffs</h3>
+                        <p class="product-desc"> Vape Lost Mary OS500 5,000 Puffs. Batería recargable tipo C .
+                            5,000 puffs. Varios sabores disponibles</p>
+                        
+                        <!-- Selector de sabores -->
+                        <div class="flavor-selection">
+                            <label for="flavor-lostos">Selecciona un sabor (mas sabores preguntar al vendedor):</label>
+                            <select id="flavor-lostos" class="select-flavor">
+                                <option value="Menta"> Menta </option>
+                                <option value="Fresa"> Fresa </option>
+                                <option value="Uva"> Uva </option>
+                                <option value="sandya"> Sandía </option>
+                                <option value="mango"> Mango </option>
+                                <option value="Otro Sabor"> Otro Sabor</option>
+                            </select>
+                        </div>
+
+                        <div class="product-footer">
+                            <span class="product-price">$100.00</span>
+                            <button class="btn-add" onclick="addToCartWithFlavor('Vape Lost Mary OS5000 5,000 Puffs', 100, 'flavor-lostos')">
+                                <i data-lucide="plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 49 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="images/micco.jpg" alt="Vape micco" class="product-item-img">
+                    </div>
+                    <div class="product-info">
+                        <h3>Vape Micco 16,000 Puffs</h3>
+                        <p class="product-desc"> Vape Micco 16,000 Puffs. Batería recargable tipo C .
+                            16,000 puffs. Varios sabores disponibles</p>
+                        
+                        <!-- Selector de sabores -->
+                        <div class="flavor-selection">
+                            <label for="flavor-micco">Selecciona un sabor (mas sabores preguntar al vendedor):</label>
+                            <select id="flavor-micco" class="select-flavor">
+                                <option value="Menta"> Menta </option>
+                                <option value="Fresa"> Fresa </option>
+                                <option value="Uva"> Uva </option>
+                                <option value="sandya"> Sandía </option>
+                                <option value="mango"> Mango </option>
+                                <option value="Otro Sabor"> Otro Sabor</option>
+                            </select>
+                        </div>
+
+                        <div class="product-footer">
+                            <span class="product-price">$100.00</span>
+                            <button class="btn-add" onclick="addToCartWithFlavor('Vape Micco 16,000 Puffs', 100, 'flavor-micco')">
+                                <i data-lucide="plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 50 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="images/multi_x.jpg" alt="Vape multi x" class="product-item-img">
+                    </div>
+                    <div class="product-info">
+                        <h3>Vape Multi X 6,000 Puffs</h3>
+                        <p class="product-desc"> Vape Multi X 6,000 Puffs. Batería recargable tipo C .
+                            6,000 puffs. Varios sabores disponibles</p>
+                        
+                        <!-- Selector de sabores -->
+                        <div class="flavor-selection">
+                            <label for="flavor-multi-x">Selecciona un sabor (mas sabores preguntar al vendedor):</label>
+                            <select id="flavor-multi-x" class="select-flavor">
+                                <option value="Menta"> Menta </option>
+                                <option value="Fresa"> Fresa </option>
+                                <option value="Uva"> Uva </option>
+                                <option value="sandya"> Sandía </option>
+                                <option value="mango"> Mango </option>
+                                <option value="Otro Sabor"> Otro Sabor</option>
+                            </select>
+                        </div>
+
+                        <div class="product-footer">
+                            <span class="product-price">$100.00</span>
+                            <button class="btn-add" onclick="addToCartWithFlavor('Vape Multi X 6,000 Puffs', 100, 'flavor-multi-x')">
+                                <i data-lucide="plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 51 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="images/rama.jpg" alt="Vape rama" class="product-item-img">
+                    </div>
+                    <div class="product-info">
+                        <h3>Vape Rama 16,000 Puffs</h3>
+                        <p class="product-desc"> Vape Rama 16,000 Puffs. Batería recargable tipo C .
+                            16,000 puffs. Varios sabores disponibles</p>
+                        
+                        <!-- Selector de sabores -->
+                        <div class="flavor-selection">
+                            <label for="flavor-rama">Selecciona un sabor (mas sabores preguntar al vendedor):</label>
+                            <select id="flavor-rama" class="select-flavor">
+                                <option value="Menta"> Menta </option>
+                                <option value="Fresa"> Fresa </option>
+                                <option value="Uva"> Uva </option>
+                                <option value="sandya"> Sandía </option>
+                                <option value="mango"> Mango </option>
+                                <option value="Otro Sabor"> Otro Sabor</option>
+                            </select>
+                        </div>
+
+                        <div class="product-footer">
+                            <span class="product-price">$100.00</span>
+                            <button class="btn-add" onclick="addToCartWithFlavor('Vape Rama 16,000 Puffs', 100, 'flavor-rama')">
+                                <i data-lucide="plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 52 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="images/ease.webp" alt="Vape ease" class="product-item-img">
+                    </div>
+                    <div class="product-info">
+                        <h3>Vape SnowWolf EASE 8,000 Puffs</h3>
+                        <p class="product-desc"> Vape SnowWolf EASE 8,000 Puffs. Batería recargable tipo C .
+                            8,000 puffs. Varios sabores disponibles</p>
+                        
+                        <!-- Selector de sabores -->
+                        <div class="flavor-selection">
+                            <label for="flavor-ease">Selecciona un sabor (mas sabores preguntar al vendedor):</label>
+                            <select id="flavor-ease" class="select-flavor">
+                                <option value="Menta"> Menta </option>
+                                <option value="Fresa"> Fresa </option>
+                                <option value="Uva"> Uva </option>
+                                <option value="sandya"> Sandía </option>
+                                <option value="mango"> Mango </option>
+                                <option value="Otro Sabor"> Otro Sabor</option>
+                            </select>
+                        </div>
+
+                        <div class="product-footer">
+                            <span class="product-price">$100.00</span>
+                            <button class="btn-add" onclick="addToCartWithFlavor('Vape SnowWolf EASE 8,000 Puffs', 100, 'flavor-ease')">
+                                <i data-lucide="plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 53 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="images/solobar.webp" alt="Vape solobar" class="product-item-img">
+                    </div>
+                    <div class="product-info">
+                        <h3>Vape SoloBar 35,000 Puffs</h3>
+                        <p class="product-desc"> Vape SoloBar 35,000 Puffs. Batería recargable tipo C .
+                            35,000 puffs. Varios sabores disponibles</p>
+                        
+                        <!-- Selector de sabores -->
+                        <div class="flavor-selection">
+                            <label for="flavor-solobar">Selecciona un sabor (mas sabores preguntar al vendedor):</label>
+                            <select id="flavor-solobar" class="select-flavor">
+                                <option value="Menta"> Menta </option>
+                                <option value="Fresa"> Fresa </option>
+                                <option value="Uva"> Uva </option>
+                                <option value="sandya"> Sandía </option>
+                                <option value="mango"> Mango </option>
+                                <option value="Otro Sabor"> Otro Sabor</option>
+                            </select>
+                        </div>
+
+                        <div class="product-footer">
+                            <span class="product-price">$100.00</span>
+                            <button class="btn-add" onclick="addToCartWithFlavor('Vape SoloBar 35,000 Puffs', 100, 'flavor-solobar')">
+                                <i data-lucide="plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 54 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="images/swype.webp" alt="Vape swype" class="product-item-img">
+                    </div>
+                    <div class="product-info">
+                        <h3>Vape Swype 30,000 Puffs</h3>
+                        <p class="product-desc"> Vape Swype 30,000 Puffs. Batería recargable tipo C .
+                            30,000 puffs. Varios sabores disponibles</p>
+                        
+                        <!-- Selector de sabores -->
+                        <div class="flavor-selection">
+                            <label for="flavor-swype">Selecciona un sabor (mas sabores preguntar al vendedor):</label>
+                            <select id="flavor-swype" class="select-flavor">
+                                <option value="Menta"> Menta </option>
+                                <option value="Fresa"> Fresa </option>
+                                <option value="Uva"> Uva </option>
+                                <option value="sandya"> Sandía </option>
+                                <option value="mango"> Mango </option>
+                                <option value="Otro Sabor"> Otro Sabor</option>
+                            </select>
+                        </div>
+
+                        <div class="product-footer">
+                            <span class="product-price">$100.00</span>
+                            <button class="btn-add" onclick="addToCartWithFlavor('Vape Swype 30,000 Puffs', 100, 'flavor-swype')">
+                                <i data-lucide="plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 55 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="images/tyson_15.jpg" alt="Vape tyson 15" class="product-item-img">
+                    </div>
+                    <div class="product-info">
+                        <h3>Tyson: Iron Make 15,000 Puffs</h3>
+                        <p class="product-desc"> Vape oficial de mike tyson 15,000 Puffs. Batería recargable tipo C .
+                            15,000 puffs. Varios sabores disponibles</p>
+                        
+                        <!-- Selector de sabores -->
+                        <div class="flavor-selection">
+                            <label for="flavor-tyson">Selecciona un sabor (mas sabores preguntar al vendedor):</label>
+                            <select id="flavor-tyson" class="select-flavor">
+                                <option value="Menta"> Menta </option>
+                                <option value="Fresa"> Fresa </option>
+                                <option value="Uva"> Uva </option>
+                                <option value="sandya"> Sandía </option>
+                                <option value="mango"> Mango </option>
+                                <option value="Otro Sabor"> Otro Sabor</option>
+                            </select>
+                        </div>
+
+                        <div class="product-footer">
+                            <span class="product-price">$100.00</span>
+                            <button class="btn-add" onclick="addToCartWithFlavor('Vape Tyson 15,000 Puffs', 100, 'flavor-tyson')">
+                                <i data-lucide="plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 56 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="images/true.jpg" alt="Vape true story" class="product-item-img">
+                    </div>
+                    <div class="product-info">
+                        <h3>Vape True Story 20,000 Puffs</h3>
+                        <p class="product-desc"> Vape True Story 20,000 Puffs. Batería recargable tipo C .
+                            20,000 puffs. Varios sabores disponibles</p>
+                        
+                        <!-- Selector de sabores -->
+                        <div class="flavor-selection">
+                            <label for="flavor-true">Selecciona un sabor (mas sabores preguntar al vendedor):</label>
+                            <select id="flavor-true" class="select-flavor">
+                                <option value="Menta"> Menta </option>
+                                <option value="Fresa"> Fresa </option>
+                                <option value="Uva"> Uva </option>
+                                <option value="sandya"> Sandía </option>
+                                <option value="mango"> Mango </option>
+                                <option value="Otro Sabor"> Otro Sabor</option>
+                            </select>
+                        </div>
+
+                        <div class="product-footer">
+                            <span class="product-price">$100.00</span>
+                            <button class="btn-add" onclick="addToCartWithFlavor('Vape True Story 20,000 Puffs', 100, 'flavor-true')">
+                                <i data-lucide="plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 57 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="images/uwell.webp" alt="Vape uwell" class="product-item-img">
+                    </div>
+                    <div class="product-info">
+                        <h3>Vape Uwell DL8000 8,000 Puffs</h3>
+                        <p class="product-desc"> Vape Uwell DL8000 8,000 Puffs. Batería recargable tipo C .
+                            8,000 puffs. Varios sabores disponibles</p>
+                        
+                        <!-- Selector de sabores -->
+                        <div class="flavor-selection">
+                            <label for="flavor-uwell">Selecciona un sabor (mas sabores preguntar al vendedor):</label>
+                            <select id="flavor-uwell" class="select-flavor">
+                                <option value="Menta"> Menta </option>
+                                <option value="Fresa"> Fresa </option>
+                                <option value="Uva"> Uva </option>
+                                <option value="sandya"> Sandía </option>
+                                <option value="mango"> Mango </option>
+                                <option value="Otro Sabor"> Otro Sabor</option>
+                            </select>
+                        </div>
+
+                        <div class="product-footer">
+                            <span class="product-price">$100.00</span>
+                            <button class="btn-add" onclick="addToCartWithFlavor('Vape Uwell DL8000 8,000 Puffs', 100, 'flavor-uwell')">
+                                <i data-lucide="plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 58 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="images/orion.webp" alt="Vape Orion" class="product-item-img">
+                    </div>
+                    <div class="product-info">
+                        <h3>Lost Vape: Orion Bar 50,000 Puffs</h3>
+                        <p class="product-desc"> Lost Vape Orion Bar 50,000 Puffs. Batería recargable tipo C .
+                            50,000 puffs. Varios sabores disponibles</p>
+                        
+                        <!-- Selector de sabores -->
+                        <div class="flavor-selection">
+                            <label for="flavor-orionbar">Selecciona un sabor (mas sabores preguntar al vendedor):</label>
+                            <select id="flavor-orionbar" class="select-flavor">
+                                <option value="Menta"> Menta </option>
+                                <option value="Fresa"> Fresa </option>
+                                <option value="Uva"> Uva </option>
+                                <option value="sandya"> Sandía </option>
+                                <option value="mango"> Mango </option>
+                                <option value="Otro Sabor"> Otro Sabor</option>
+                            </select>
+                        </div>
+
+                        <div class="product-footer">
+                            <span class="product-price">$100.00</span>
+                            <button class="btn-add" onclick="addToCartWithFlavor('Lost Vape: Orion Bar 50,000 Puffs', 100, 'flavor-orionbar')">
+                                <i data-lucide="plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 59 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="images/blade.webp" alt="Vape Blade" class="product-item-img">
+                    </div>
+                    <div class="product-info">
+                        <h3> Vape Waka Blade 33,000 Puffs</h3>
+                        <p class="product-desc">Vape Waka Blade 33,000 Puffs. Batería recargable tipo C .
+                            33,000 puffs. Varios sabores disponibles</p>
+                        
+                        <!-- Selector de sabores -->
+                        <div class="flavor-selection">
+                            <label for="flavor-blade">Selecciona un sabor (mas sabores preguntar al vendedor):</label>
+                            <select id="flavor-blade" class="select-flavor">
+                                <option value="Menta"> Menta </option>
+                                <option value="Fresa"> Fresa </option>
+                                <option value="Uva"> Uva </option>
+                                <option value="sandya"> Sandía </option>
+                                <option value="mango"> Mango </option>
+                                <option value="Otro Sabor"> Otro Sabor</option>
+                            </select>
+                        </div>
+
+                        <div class="product-footer">
+                            <span class="product-price">$100.00</span>
+                            <button class="btn-add" onclick="addToCartWithFlavor('Vape Waka Blade 33,000 Puffs', 100, 'flavor-blade')">
+                                <i data-lucide="plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 60 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="images/wave.jpg" alt="Vape wave vue" class="product-item-img">
+                    </div>
+                    <div class="product-info">
+                        <h3> Vape Wave Vua 10,000 Puffs</h3>
+                        <p class="product-desc">Vape Wave Vua 10,000 Puffs. Batería recargable tipo C .
+                            10,000 puffs. Varios sabores disponibles</p>
+                        
+                        <!-- Selector de sabores -->
+                        <div class="flavor-selection">
+                            <label for="flavor-wave">Selecciona un sabor (mas sabores preguntar al vendedor):</label>
+                            <select id="flavor-wave" class="select-flavor">
+                                <option value="Menta"> Menta </option>
+                                <option value="Fresa"> Fresa </option>
+                                <option value="Uva"> Uva </option>
+                                <option value="sandya"> Sandía </option>
+                                <option value="mango"> Mango </option>
+                                <option value="Otro Sabor"> Otro Sabor</option>
+                            </select>
+                        </div>
+
+                        <div class="product-footer">
+                            <span class="product-price">$100.00</span>
+                            <button class="btn-add" onclick="addToCartWithFlavor('Vape Wave Vua 10,000 Puffs', 100, 'flavor-wave')">
+                                <i data-lucide="plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Producto 61 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="images/wave8k.webp" alt="Vape wave" class="product-item-img">
+                    </div>
+                    <div class="product-info">
+                        <h3> Vape Wave 8,000 Puffs</h3>
+                        <p class="product-desc">Vape Wave 8,000 Puffs. Batería recargable tipo C .
+                            8,000 puffs. Varios sabores disponibles</p>
+                        
+                        <!-- Selector de sabores -->
+                        <div class="flavor-selection">
+                            <label for="flavor-wave8k">Selecciona un sabor (mas sabores preguntar al vendedor):</label>
+                            <select id="flavor-wave8k" class="select-flavor">
+                                <option value="Menta"> Menta </option>
+                                <option value="Fresa"> Fresa </option>
+                                <option value="Uva"> Uva </option>
+                                <option value="sandya"> Sandía </option>
+                                <option value="mango"> Mango </option>
+                                <option value="Otro Sabor"> Otro Sabor</option>
+                            </select>
+                        </div>
+
+                        <div class="product-footer">
+                            <span class="product-price">$100.00</span>
+                            <button class="btn-add" onclick="addToCartWithFlavor('Vape Wave 8,000 Puffs', 100, 'flavor-wave8k')">
+                                <i data-lucide="plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+
+
+            </div>
+        </section>
+
+        <!-- SECCIÓN WAX -->
+        <section id="liquidos" class="category-section">
+            <h2 class="section-title">🧪 wax Premium</h2>
+            <div class="products-grid">
+                
+                <!-- Wax 1 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="images/usa_star.webp" alt="Vape usa star" class="product-item-img">
+                    </div>
+                    <div class="product-info">
+                        <h3> Wax Max US Star 50,000 Puffs</h3>
+                        <p class="product-desc">Wax Max US Star 50,000 Puffs. Batería recargable tipo C .
+                            2 Gramos. Varios sabores disponibles</p>
+                        
+                        <!-- Selector de sabores -->
+                        <div class="flavor-selection">
+                            <label for="flavor-usa_star">Selecciona un sabor:</label>
+                            <select id="flavor-usa_star" class="select-flavor">
+                                <option value="Sabor a elegir"> Sabor a elegir (pregunte al vendedor)</option>
+                            </select>
+                        </div>
+
+                        <div class="product-footer">
+                            <span class="product-price">$600.00</span>
+                            <button class="btn-add" onclick="addToCartWithFlavor('Wax Max US Star 50,000 Puffs', 600, 'flavor-usa_star')">
+                                <i data-lucide="plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Wax 2 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="images/muha_triple.webp" alt="Vape muha triple" class="product-item-img">
+                    </div>
+                    <div class="product-info">
+                        <h3> Wax MuhaMeds Triple Sabor</h3>
+                        <p class="product-desc">Wax MuhaMeds de Triple Sabor. Batería recargable tipo C .
+                            2 Gramos. Varios sabores disponibles</p>
+                        
+                        <!-- Selector de sabores -->
+                        <div class="flavor-selection">
+                            <label for="flavor-muha_triple">Selecciona un sabor:</label>
+                            <select id="flavor-muha_triple" class="select-flavor">
+                                <option value="Sabor a elegir"> Sabor a elegir (pregunte al vendedor)</option>
+                            </select>
+                        </div>
+
+                        <div class="product-footer">
+                            <span class="product-price">$600.00</span>
+                            <button class="btn-add" onclick="addToCartWithFlavor('Wax MuhaMeds Triple Sabor', 600, 'flavor-muha_triple')">
+                                <i data-lucide="plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Wax 3 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="images/packman.webp" alt="Vape packman" class="product-item-img">
+                    </div>
+                    <div class="product-info">
+                        <h3> Wax PackMan</h3>
+                        <p class="product-desc">Wax PackMan. Batería recargable tipo C .
+                            3 Gramos. Varios sabores disponibles</p>
+                        
+                        <!-- Selector de sabores -->
+                        <div class="flavor-selection">
+                            <label for="flavor-packman">Selecciona un sabor:</label>
+                            <select id="flavor-packman" class="select-flavor">
+                                <option value="Sabor a elegir"> Sabor a elegir (pregunte al vendedor)</option>
+                            </select>
+                        </div>
+
+                        <div class="product-footer">
+                            <span class="product-price">$600.00</span>
+                            <button class="btn-add" onclick="addToCartWithFlavor('Wax PackMan', 600, 'flavor-packman')">
+                                <i data-lucide="plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Wax 4 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="images/jungle.webp" alt="Vape jungle" class="product-item-img">
+                    </div>
+                    <div class="product-info">
+                        <h3> Wax Jungle Boys</h3>
+                        <p class="product-desc">Wax Jungle Boys. Batería recargable tipo C .
+                            1 y 2 Gramos. Varios sabores disponibles</p>
+                        
+                        <!-- Selector de sabores -->
+                        <div class="flavor-selection">
+                            <label for="flavor-jungle">Selecciona un sabor:</label>
+                            <select id="flavor-jungle" class="select-flavor">
+                                <option value="Sabor a elegir"> Sabor a elegir (pregunte al vendedor)</option>
+                            </select>
+                        </div>
+
+                        <div class="product-footer">
+                            <span class="product-price">$600.00</span>
+                            <button class="btn-add" onclick="addToCartWithFlavor('Wax Jungle Boys', 600, 'flavor-jungle')">
+                                <i data-lucide="plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Wax 5 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="images/bugatti.jpg" alt="Vape jungle" class="product-item-img">
+                    </div>
+                    <div class="product-info">
+                        <h3> Wax Bugatti</h3>
+                        <p class="product-desc">Wax Bugatti. Batería recargable tipo C .
+                            2 Gramos. Varios sabores disponibles</p>
+                        
+                        <!-- Selector de sabores -->
+                        <div class="flavor-selection">
+                            <label for="flavor-bugatti">Selecciona un sabor:</label>
+                            <select id="flavor-bugatti" class="select-flavor">
+                                <option value="Sabor a elegir"> Sabor a elegir (pregunte al vendedor)</option>
+                            </select>
+                        </div>
+
+                        <div class="product-footer">
+                            <span class="product-price">$600.00</span>
+                            <button class="btn-add" onclick="addToCartWithFlavor('Wax Bugatti', 600, 'flavor-bugatti')">
+                                <i data-lucide="plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Wax 6 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="images/big_chief.webp" alt="Vape big chief" class="product-item-img">
+                    </div>
+                    <div class="product-info">
+                        <h3> Wax Big Chief</h3>
+                        <p class="product-desc">Wax Big Chief. Batería recargable tipo C .
+                            2 Gramos. Varios sabores disponibles</p>
+                        
+                        <!-- Selector de sabores -->
+                        <div class="flavor-selection">
+                            <label for="flavor-bigchief">Selecciona un sabor:</label>
+                            <select id="flavor-bigchief" class="select-flavor">
+                                <option value="Sabor a elegir"> Sabor a elegir (pregunte al vendedor)</option>
+                            </select>
+                        </div>
+
+                        <div class="product-footer">
+                            <span class="product-price">$600.00</span>
+                            <button class="btn-add" onclick="addToCartWithFlavor('Wax Big Chief', 600, 'flavor-bigchief')">
+                                <i data-lucide="plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Wax 7 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="images/backpack.png" alt="Vape BackPack" class="product-item-img">
+                    </div>
+                    <div class="product-info">
+                        <h3> Wax BackPack Boyz</h3>
+                        <p class="product-desc">Wax BackPack Boyz. Batería recargable tipo C .
+                            2 Gramos. Varios sabores disponibles</p>
+                        
+                        <!-- Selector de sabores -->
+                        <div class="flavor-selection">
+                            <label for="flavor-backpack">Selecciona un sabor:</label>
+                            <select id="flavor-backpack" class="select-flavor">
+                                <option value="Sabor a elegir"> Sabor a elegir (pregunte al vendedor)</option>
+                            </select>
+                        </div>
+
+                        <div class="product-footer">
+                            <span class="product-price">$600.00</span>
+                            <button class="btn-add" onclick="addToCartWithFlavor('Wax BackPack Boyz', 600, 'flavor-backpack')">
+                                <i data-lucide="plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Wax 8 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="images/knockout.jpg" alt="Vape Knockout" class="product-item-img">
+                    </div>
+                    <div class="product-info">
+                        <h3> Wax Oficial de Tyson: KnockOut</h3>
+                        <p class="product-desc">Wax Tyson: KnockOut. Batería recargable tipo C .
+                            3 Gramos. Varios sabores disponibles</p>
+                        
+                        <!-- Selector de sabores -->
+                        <div class="flavor-selection">
+                            <label for="flavor-knockout">Selecciona un sabor:</label>
+                            <select id="flavor-knockout" class="select-flavor">
+                                <option value="Sabor a elegir"> Sabor a elegir (pregunte al vendedor)</option>
+                            </select>
+                        </div>
+
+                        <div class="product-footer">
+                            <span class="product-price">$600.00</span>
+                            <button class="btn-add" onclick="addToCartWithFlavor('Wax Oficial de Tyson: KnockOut', 600, 'flavor-knockout')">
+                                <i data-lucide="plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Wax 9 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="images/muha_full.png" alt="Vape muhameds full" class="product-item-img">
+                    </div>
+                    <div class="product-info">
+                        <h3> Wax MuhaMeds Full Colors</h3>
+                        <p class="product-desc">Wax MuhaMeds Full Colors. Batería recargable tipo C .
+                            2 Gramos. Varios sabores disponibles</p>
+                        
+                        <!-- Selector de sabores -->
+                        <div class="flavor-selection">
+                            <label for="flavor-muha">Selecciona un sabor:</label>
+                            <select id="flavor-muha" class="select-flavor">
+                                <option value="Sabor a elegir"> Sabor a elegir (pregunte al vendedor)</option>
+                            </select>
+                        </div>
+
+                        <div class="product-footer">
+                            <span class="product-price">$600.00</span>
+                            <button class="btn-add" onclick="addToCartWithFlavor('Wax MuhaMeds Full Colors', 600, 'flavor-muha')">
+                                <i data-lucide="plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Wax 10 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="images/luigi.webp" alt="Vape luigi" class="product-item-img">
+                    </div>
+                    <div class="product-info">
+                        <h3> Wax Luigi</h3>
+                        <p class="product-desc">Wax Luigi, con porro incluido. Batería recargable tipo C .
+                            2 Gramos. Varios sabores disponibles</p>
+                        
+                        <!-- Selector de sabores -->
+                        <div class="flavor-selection">
+                            <label for="flavor-luigi">Selecciona un sabor:</label>
+                            <select id="flavor-luigi" class="select-flavor">
+                                <option value="Sabor a elegir"> Sabor a elegir (pregunte al vendedor)</option>
+                            </select>
+                        </div>
+
+                        <div class="product-footer">
+                            <span class="product-price">$600.00</span>
+                            <button class="btn-add" onclick="addToCartWithFlavor('Wax Luigi', 600, 'flavor-luigi')">
+                                <i data-lucide="plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Wax 11 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="images/besos.jpg" alt="Vape besos" class="product-item-img">
+                    </div>
+                    <div class="product-info">
+                        <h3> Wax Besos</h3>
+                        <p class="product-desc">Wax Besos. Batería recargable tipo C .
+                            2 Gramos. Varios sabores disponibles</p>
+                        
+                        <!-- Selector de sabores -->
+                        <div class="flavor-selection">
+                            <label for="flavor-besos">Selecciona un sabor:</label>
+                            <select id="flavor-besos" class="select-flavor">
+                                <option value="Sabor a elegir"> Sabor a elegir (pregunte al vendedor)</option>
+                            </select>
+                        </div>
+
+                        <div class="product-footer">
+                            <span class="product-price">$600.00</span>
+                            <button class="btn-add" onclick="addToCartWithFlavor('Wax Besos', 600, 'flavor-besos')">
+                                <i data-lucide="plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Wax 12 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="images/tyson_2.png" alt="Vape tyson 2.0" class="product-item-img">
+                    </div>
+                    <div class="product-info">
+                        <h3> Wax Oficial de Tyson 2.0</h3>
+                        <p class="product-desc">Wax Oficial de Tyson 2.0. Batería recargable tipo C .
+                            2 Gramos. Varios sabores disponibles</p>
+                        
+                        <!-- Selector de sabores -->
+                        <div class="flavor-selection">
+                            <label for="flavor-tyson2.0">Selecciona un sabor:</label>
+                            <select id="flavor-tyson2.0" class="select-flavor">
+                                <option value="Sabor a elegir"> Sabor a elegir (pregunte al vendedor)</option>
+                            </select>
+                        </div>
+
+                        <div class="product-footer">
+                            <span class="product-price">$600.00</span>
+                            <button class="btn-add" onclick="addToCartWithFlavor('Wax Oficial de Tyson 2.0', 600, 'flavor-tyson2.0')">
+                                <i data-lucide="plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Wax 13 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="images/roar.jpg" alt="Vape roar" class="product-item-img">
+                    </div>
+                    <div class="product-info">
+                        <h3> Wax Roar</h3>
+                        <p class="product-desc">Wax roar. Batería recargable tipo C .
+                            2 Gramos. Varios sabores disponibles</p>
+                        
+                        <!-- Selector de sabores -->
+                        <div class="flavor-selection">
+                            <label for="flavor-roar">Selecciona un sabor:</label>
+                            <select id="flavor-roar" class="select-flavor">
+                                <option value="Sabor a elegir"> Sabor a elegir (pregunte al vendedor)</option>
+                            </select>
+                        </div>
+
+                        <div class="product-footer">
+                            <span class="product-price">$600.00</span>
+                            <button class="btn-add" onclick="addToCartWithFlavor('Wax Roar', 600, 'flavor-roar')">
+                                <i data-lucide="plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Wax 14 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="images/escobars.webp" alt="Vape escobars" class="product-item-img">
+                    </div>
+                    <div class="product-info">
+                        <h3> Wax Escobars</h3>
+                        <p class="product-desc">Wax escobars. Batería recargable tipo C .
+                            3 Gramos. Varios sabores disponibles</p>
+                        
+                        <!-- Selector de sabores -->
+                        <div class="flavor-selection">
+                            <label for="flavor-escobars">Selecciona un sabor:</label>
+                            <select id="flavor-escobars" class="select-flavor">
+                                <option value="Sabor a elegir"> Sabor a elegir (pregunte al vendedor)</option>
+                            </select>
+                        </div>
+
+                        <div class="product-footer">
+                            <span class="product-price">$600.00</span>
+                            <button class="btn-add" onclick="addToCartWithFlavor('Wax Escobars', 600, 'flavor-escobars')">
+                                <i data-lucide="plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Wax 15 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="images/boutiq.webp" alt="Vape boutiq" class="product-item-img">
+                    </div>
+                    <div class="product-info">
+                        <h3> Wax Boutiq Switch</h3>
+                        <p class="product-desc">Wax boutiq Switch. Batería recargable tipo C .
+                            2 Gramos. Varios sabores disponibles</p>
+                        
+                        <!-- Selector de sabores -->
+                        <div class="flavor-selection">
+                            <label for="flavor-boutiq">Selecciona un sabor:</label>
+                            <select id="flavor-boutiq" class="select-flavor">
+                                <option value="Sabor a elegir"> Sabor a elegir (pregunte al vendedor)</option>
+                            </select>
+                        </div>
+
+                        <div class="product-footer">
+                            <span class="product-price">$600.00</span>
+                            <button class="btn-add" onclick="addToCartWithFlavor('Wax Boutiq Switch', 600, 'flavor-boutiq')">
+                                <i data-lucide="plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Wax 16 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="images/blinkers.webp" alt="Vape blinkers" class="product-item-img">
+                    </div>
+                    <div class="product-info">
+                        <h3> Wax Blinkers Flip</h3>
+                        <p class="product-desc">Wax blinkers Flip. Batería recargable tipo C .
+                            2 Gramos. Varios sabores disponibles</p>
+                        
+                        <!-- Selector de sabores -->
+                        <div class="flavor-selection">
+                            <label for="flavor-blinkers">Selecciona un sabor:</label>
+                            <select id="flavor-blinkers" class="select-flavor">
+                                <option value="Sabor a elegir"> Sabor a elegir (pregunte al vendedor)</option>
+                            </select>
+                        </div>
+
+                        <div class="product-footer">
+                            <span class="product-price">$600.00</span>
+                            <button class="btn-add" onclick="addToCartWithFlavor('Wax Blinkers Flip', 600, 'flavor-blinkers')">
+                                <i data-lucide="plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <!-- Wax 17 -->
+                    <div class="product-img-wrapper">
+                        <img src="images/cake.jpg" alt="Vape cake" class="product-item-img">
+                    </div>
+                    <div class="product-info">
+                        <h3> Wax Cake</h3>
+                        <p class="product-desc">Wax cake. Batería recargable tipo C .
+                            2 Gramos. Varios sabores disponibles</p>
+                        
+                        <!-- Selector de sabores -->
+                        <div class="flavor-selection">
+                            <label for="flavor-cake">Selecciona un sabor:</label>
+                            <select id="flavor-cake" class="select-flavor">
+                                <option value="Sabor a elegir"> Sabor a elegir (pregunte al vendedor)</option>
+                            </select>
+                        </div>
+
+                        <div class="product-footer">
+                            <span class="product-price">$600.00</span>
+                            <button class="btn-add" onclick="addToCartWithFlavor('Wax Cake', 600, 'flavor-cake')">
+                                <i data-lucide="plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Wax 18 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="images/choise.jpg" alt="Vape choiselab" class="product-item-img">
+                    </div>
+                    <div class="product-info">
+                        <h3> Wax ChoisesLab</h3>
+                        <p class="product-desc">Wax choiselab. Batería recargable tipo C .
+                            2 Gramos. Varios sabores disponibles</p>
+                        
+                        <!-- Selector de sabores -->
+                        <div class="flavor-selection">
+                            <label for="flavor-choise">Selecciona un sabor:</label>
+                            <select id="flavor-choise" class="select-flavor">
+                                <option value="Sabor a elegir"> Sabor a elegir (pregunte al vendedor)</option>
+                            </select>
+                        </div>
+
+                        <div class="product-footer">
+                            <span class="product-price">$600.00</span>
+                            <button class="btn-add" onclick="addToCartWithFlavor('Wax ChoisesLab', 600, 'flavor-choise')">
+                                <i data-lucide="plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Wax 19 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="images/ace.webp" alt="Vape ace ultra" class="product-item-img">
+                    </div>
+                    <div class="product-info">
+                        <h3> Wax Ace Ultra</h3>
+                        <p class="product-desc">Wax ace ultra. Batería recargable tipo C .
+                            2 Gramos. Varios sabores disponibles</p>
+                        
+                        <!-- Selector de sabores -->
+                        <div class="flavor-selection">
+                            <label for="flavor-ace">Selecciona un sabor:</label>
+                            <select id="flavor-ace" class="select-flavor">
+                                <option value="Sabor a elegir"> Sabor a elegir (pregunte al vendedor)</option>
+                            </select>
+                        </div>
+
+                        <div class="product-footer">
+                            <span class="product-price">$600.00</span>
+                            <button class="btn-add" onclick="addToCartWithFlavor('Wax Ace Ultra', 600, 'flavor-ace')">
+                                <i data-lucide="plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Wax 20 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="images/clean.jpeg" alt="Vape clean carts" class="product-item-img">
+                    </div>
+                    <div class="product-info">
+                        <h3> Wax Clean Carts</h3>
+                        <p class="product-desc">Wax clean carts. Batería recargable tipo C .
+                            2 Gramos. Varios sabores disponibles</p>
+                        
+                        <!-- Selector de sabores -->
+                        <div class="flavor-selection">
+                            <label for="flavor-clean">Selecciona un sabor:</label>
+                            <select id="flavor-clean" class="select-flavor">
+                                <option value="Sabor a elegir"> Sabor a elegir (pregunte al vendedor)</option>
+                            </select>
+                        </div>
+
+                        <div class="product-footer">
+                            <span class="product-price">$600.00</span>
+                            <button class="btn-add" onclick="addToCartWithFlavor('Wax Clean Carts', 600, 'flavor-clean')">
+                                <i data-lucide="plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Wax 21 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="images/packman_switch.webp" alt="Vape packman switch" class="product-item-img">
+                    </div>
+                    <div class="product-info">
+                        <h3> Wax PackMan Switch</h3>
+                        <p class="product-desc">Wax packman switch. Batería recargable tipo C .
+                            2 Gramos. Varios sabores disponibles</p>
+                        
+                        <!-- Selector de sabores -->
+                        <div class="flavor-selection">
+                            <label for="flavor-packman_switch">Selecciona un sabor:</label>
+                            <select id="flavor-packman_switch" class="select-flavor">
+                                <option value="Sabor a elegir"> Sabor a elegir (pregunte al vendedor)</option>
+                            </select>
+                        </div>
+
+                        <div class="product-footer">
+                            <span class="product-price">$600.00</span>
+                            <button class="btn-add" onclick="addToCartWithFlavor('Wax PackMan Switch', 600, 'flavor-packman_switch')">
+                                <i data-lucide="plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Wax 22 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="images/donuts.webp" alt="Vape donuts switch" class="product-item-img">
+                    </div>
+                    <div class="product-info">
+                        <h3> Wax Donuts Switch</h3>
+                        <p class="product-desc">Wax donuts switch. Batería recargable tipo C .
+                            2 Gramos. Varios sabores disponibles</p>
+                        
+                        <!-- Selector de sabores -->
+                        <div class="flavor-selection">
+                            <label for="flavor-donuts_switch">Selecciona un sabor:</label>
+                            <select id="flavor-donuts_switch" class="select-flavor">
+                                <option value="Sabor a elegir"> Sabor a elegir (pregunte al vendedor)</option>
+                            </select>
+                        </div>
+
+                        <div class="product-footer">
+                            <span class="product-price">$600.00</span>
+                            <button class="btn-add" onclick="addToCartWithFlavor('Wax Donuts Switch', 600, 'flavor-donuts_switch')">
+                                <i data-lucide="plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Wax 23 -->
+                <div class="product-card">
+                    <div class="product-img-wrapper">
+                        <img src="images/fuego.webp" alt="Vape fuego" class="product-item-img">
+                    </div>
+                    <div class="product-info">
+                        <h3> Wax Fuego</h3>
+                        <p class="product-desc">Wax fuego. Batería recargable tipo C .
+                            2 Gramos. Varios sabores disponibles</p>
+                        
+                        <!-- Selector de sabores -->
+                        <div class="flavor-selection">
+                            <label for="flavor-fuego">Selecciona un sabor:</label>
+                            <select id="flavor-fuego" class="select-flavor">
+                                <option value="Sabor a elegir"> Sabor a elegir (pregunte al vendedor)</option>
+                            </select>
+                        </div>
+
+                        <div class="product-footer">
+                            <span class="product-price">$600.00</span>
+                            <button class="btn-add" onclick="addToCartWithFlavor('Wax Fuego', 600, 'flavor-fuego')">
+                                <i data-lucide="plus"></i> Agregar
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+
+        
+
+    </main>
+
+    <!-- SIDEBAR DEL CARRITO -->
+    <div id="cart-sidebar" class="cart-sidebar">
+        <div class="cart-header">
+            <h3>Tu Carrito</h3>
+            <button class="btn-close-cart" onclick="toggleCart()">
+                <i data-lucide="x"></i>
+            </button>
+        </div>
+        
+        <div id="cart-items-container" class="cart-items">
+            <p class="empty-message">Tu carrito está vacío.</p>
+        </div>
+
+        <div class="cart-footer">
+            <div class="cart-total-row">
+                <span>Total:</span>
+                <span id="cart-total-price">$0.00</span>
+            </div>
+            <button class="btn-whatsapp-order" onclick="sendWhatsAppOrder()">
+                <i data-lucide="message-square"></i> Confirmar Pedido por WhatsApp
+            </button>
+        </div>
+    </div>
+
+    <script>lucide.createIcons();</script>
+    <script src="script.js"></script>
+</body>
+</html>
