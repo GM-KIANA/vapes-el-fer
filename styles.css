@@ -530,3 +530,107 @@ body {
         max-width: 75%;
     }
 }
+
+/* FOOTER PREMIUM FULL-WIDTH */
+.site-footer {
+    background-color: #050608;
+    border-top: 1px solid var(--border-color);
+    padding: 50px 5% 30px 5%;
+    margin-top: 80px;
+    width: 100%;
+}
+
+.footer-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 40px;
+}
+
+.footer-column h4 {
+    color: #fff;
+    font-size: 1.1rem;
+    font-weight: 700;
+    margin-bottom: 18px;
+    letter-spacing: 0.5px;
+    border-left: 3px solid var(--neon-cyan);
+    padding-left: 10px;
+    text-transform: uppercase;
+}
+
+.footer-column ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-column ul li, 
+.footer-column p {
+    font-size: 0.95rem;
+    color: var(--text-muted);
+    margin-bottom: 10px;
+    line-height: 1.5;
+}
+
+.footer-column a {
+    color: var(--neon-cyan);
+    text-decoration: none;
+    transition: color 0.2s ease;
+}
+
+.footer-column a:hover {
+    color: var(--neon-purple);
+}
+
+.phone-number {
+    font-size: 1.1rem !important;
+    font-weight: bold;
+    color: #fff !important;
+}
+
+.trust-badge {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.trust-badge span {
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(0, 242, 254, 0.25);
+    padding: 8px 14px;
+    border-radius: 8px;
+    font-size: 0.85rem;
+    color: var(--text-white);
+    display: inline-block;
+    box-shadow: 0 0 10px rgba(0, 242, 254, 0.05);
+}
+
+/* BARRA INFERIOR DE CRÉDITO */
+.footer-bottom {
+    max-width: 1200px;
+    margin: 40px auto 0 auto;
+    padding-top: 25px;
+    border-top: 1px solid rgba(255, 255, 255, 0.08);
+    text-align: center;
+    font-size: 0.85rem;
+    color: #6c7280;
+}
+
+.roshi-credit {
+    margin-top: 10px;
+    font-size: 0.9rem;
+    color: #e2e8f0;
+}
+
+.roshi-link {
+    color: var(--neon-cyan);
+    font-weight: bold;
+    text-decoration: underline;
+    margin-left: 5px;
+    transition: color 0.2s ease, text-shadow 0.2s ease;
+}
+
+.roshi-link:hover {
+    color: var(--neon-purple);
+    text-shadow: 0 0 10px var(--neon-purple);
+}

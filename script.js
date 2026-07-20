@@ -3,7 +3,7 @@ let cart = [];
 
 // IMPORTANTE: Pon aquí tu número de WhatsApp de atención al cliente
 // Debe incluir el código de país sin espacios, símbolos ni el signo '+' (Ej: 521XXXXXXXXXX para México)
-const WHATSAPP_PHONE = '5214447639566'; 
+const WHATSAPP_PHONE = '4445070623'; 
 
 // NUEVA FUNCIÓN: Detecta el sabor seleccionado antes de agregar al carrito
 function addToCartWithFlavor(productName, price, selectId) {
